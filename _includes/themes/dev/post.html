@@ -12,13 +12,15 @@
       {{ content }}
     </div>
 
+  {% comment %}
   {% unless page.categories == empty %}
     <ul class="tag_box inline">
       <li><span class="glyphicon glyphicon-folder-open"></span></li>
       {% assign categories_list = page.categories %}
       {% include JB/categories_list %}
     </ul>
-  {% endunless %}  
+  {% endunless %}
+  {% endcomment %}  
 
     <hr>
     <ul class="pagination">
@@ -40,7 +42,7 @@
 	<div class="col-sm-3">
 		{% unless site.posts == empty %}
 		<div class="panel panel-default">
-			<div class="panel-heading">Recent posts</div>
+			<div class="panel-heading"><h3 class="panel-title"><strong>Recent posts</strong></h3></div>
 			<div class="list-group">	
 		      {% assign latest_posts = site.posts %}
 		  	  {% assign posts_no = 5 %}  
@@ -51,7 +53,7 @@
 		
 		{% unless page.tags == empty %}
 		<div class="panel panel-default">
-			<div class="panel-heading">Tags</div>
+			<div class="panel-heading"><h3 class="panel-title"><strong>Tags</strong></h3></div>
 			<ul class="list-group">
 				{% assign tags_list = page.tags %}
 				{% include JB/tags_list %}
