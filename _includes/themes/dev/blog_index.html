@@ -17,13 +17,11 @@
 			{{ post.excerpt }}
 			</div>
 		
-			{% comment %}
 			<div class="breadcrumb post-share">
-				{% assign share_url = post.url %}
+				{% capture share_url %}{{site.production_url}}{{post.url}}{% endcapture %}
 				{% assign share_title = post.title %}
-				{% include misc/share %}
+				{% include custom/sharing %}
 			</div>
-			{% endcomment %}
 		
 			<div> 
 				<a href="{{ post.url }}" class="btn btn-primary">more &rarr;</a>

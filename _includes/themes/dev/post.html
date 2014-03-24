@@ -20,7 +20,11 @@
 		</ul>
   {% endunless %}
   {% endcomment %}  
-
+		
+		<div class="breadcrumb">
+		{% include custom/sharing %}
+		</div>
+		
 		<hr>
 		<ul class="pagination">
 		{% if page.previous %}
