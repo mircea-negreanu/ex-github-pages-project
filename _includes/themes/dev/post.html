@@ -1,9 +1,10 @@
-<div class="page-header">
-  <h1>{{ page.title }} {% if page.tagline %}<small>{{page.tagline}}</small>{% endif %}</h1>
-</div>
-
 <div class="row post-full">
-  <div class="col-sm-12">
+  <div class="col-sm-9">
+
+	<div class="page-header">
+	  <h1>{{ page.title }} {% if page.tagline %}<small>{{page.tagline}}</small>{% endif %}</h1>
+	</div>
+
     <div class="date">
       <span>{{ page.date | date_to_long_string }}</span>
     </div>
@@ -16,14 +17,6 @@
       <li><span class="glyphicon glyphicon-folder-open"></span></li>
       {% assign categories_list = page.categories %}
       {% include JB/categories_list %}
-    </ul>
-  {% endunless %}  
-
-  {% unless page.tags == empty %}
-    <ul class="tag_box inline">
-      <li><span class="glyphicon glyphicon-tags"></span></li>
-      {% assign tags_list = page.tags %}
-      {% include JB/tags_list %}
     </ul>
   {% endunless %}  
 
@@ -44,4 +37,32 @@
     <hr>
     {% include JB/comments %}
   </div>
+	<div class="col-sm-3">
+		{% unless site.posts == empty %}
+		<div class="panel panel-default">
+			<div class="panel-heading">Recent posts</div>
+			<div class="list-group">	
+		      {% assign latest_posts = site.posts %}
+		  	  {% assign posts_no = 5 %}  
+		  	  {% include misc/latest_posts %}
+		  	 </div>
+		 </div>
+		{% endunless %}
+		
+		{% unless page.tags == empty %}
+		<div class="panel panel-default">
+			<div class="panel-heading">Tags</div>
+			<ul class="list-group">
+				{% assign tags_list = page.tags %}
+				{% include JB/tags_list %}
+			</ul>
+		</div>
+		{% endunless %}
+	
+	 	<div class="panel panel-default">
+	 		<div class="panel-body">
+				{% include misc/contribution_text %}
+	 		</div>
+	  	 </div>
+	</div>
 </div>

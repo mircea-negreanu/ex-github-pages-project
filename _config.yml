@@ -88,7 +88,10 @@ JB :
   
   pages_list:
     provider: custom
-  
+
+  tags_list:
+    provider: custom
+
 
   # Settings for comments helper
   # Set 'provider' to the comment provider you want to use.
