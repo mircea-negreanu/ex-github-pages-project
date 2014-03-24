@@ -1,19 +1,17 @@
-
 <div class="row">
+	<div class="col-sm-9">
+		<div class="page-header">
+			<h1>{{ page.title }} {% if page.tagline %} <small>{{ page.tagline }}</small>{% endif %}</h1>
+		</div>
 
-  <div class="col-sm-9">
-	<div class="page-header">
-	  <h1>{{ page.title }} {% if page.tagline %} <small>{{ page.tagline }}</small>{% endif %}</h1>
+   		{{ content }}
 	</div>
-	
-    {{ content }}
-  </div>
   
-  <div class="col-sm-3">
-  	{% if page.url == site.JB.tags_path %}
-  		{% assign show_sidebar_tags = true %}
-  		{% assign sidebar_tags = site.tags %}
-  	{% endif %}
-  	{% include misc/sidebar %}
-  </div>
+	<div class="col-sm-3">
+		{% if page.url == site.JB.tags_path %}
+			{% assign show_sidebar_tags = true %}
+			{% assign sidebar_tags = site.tags %}
+		{% endif %}
+		{% include misc/sidebar %}
+	</div>
 </div>
