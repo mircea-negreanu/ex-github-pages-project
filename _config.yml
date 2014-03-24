@@ -6,10 +6,15 @@ exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 pygments: true
 markdown: kramdown
 
+paginate: 9 # No of pages
+paginate_path: "/blog/page:num"
+
+excerpt_separator: "<!-- more -->"
+
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : Dev
+title : Dev Best Practices
 tagline: Some dev site
 author :
   name : Name Lastname
@@ -27,6 +32,11 @@ author :
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
 production_url : http://mircea-negreanu.github.io
+
+#
+# Repository for this site
+#
+github_page : https://github.com/mircea-negreanu/mircea-negreanu.github.io
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
@@ -75,6 +85,10 @@ JB :
   tags_path : /tags.html
   atom_path : /atom.xml
   rss_path : /rss.xml
+  
+  pages_list:
+    provider: custom
+  
 
   # Settings for comments helper
   # Set 'provider' to the comment provider you want to use.

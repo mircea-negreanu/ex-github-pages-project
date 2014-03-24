@@ -1,0 +1,66 @@
+<div class="page-header">
+  <h1>{{ page.title }} {% if page.tagline %} <small>{{ page.tagline }}</small>{% endif %}</h1>
+</div>
+	
+
+<div class="row">
+  <div class="col-sm-8">
+    {{ content }}
+
+			{% for post in paginator.posts %}
+			<h2><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h2>
+			<p class="author muted"> Posted on <span class="date">{{ post.date | date: "%B %e, %Y" }}</span>
+			{% if post.category %}
+				in <span class="category">	<a href="{{ BASE_PATH }}{{ site.JB.categories_path }}#{{ post.category }}-ref">
+		  {{ post.category }}</a></span>
+			{% endif %}
+			</p>
+			<div>
+			{{ post.excerpt }}
+			</div>
+		
+			{% comment %}
+			<div class="breadcrumb post-share">
+				{% assign share_url = post.url %}
+				{% assign share_title = post.title %}
+				{% include misc/share %}
+			</div>
+			{% endcomment %}
+		
+			<div> 
+				<a href="{{ post.url }}" class="btn btn-primary">more &rarr;</a>
+			</div>	
+			
+			<hr {% if forloop.last == false %}class="soften post"{% endif %}/>
+		{% endfor %}
+
+		{% if paginator.total_pages > 1 %}
+		<!-- Pagination links -->
+		<ul class="pagination">
+			{% if paginator.previous_page %}
+			<li><a href="{{ BASE_PATH }}{{ paginator.previous_page_path }}" title="Previous page">&laquo;</a></li>	
+			{% else %}
+			<li class="disabled"><a title="Previous page">&laquo;</a></li>
+			{% endif %}
+			{% for page in (1..paginator.total_pages) %}
+			  <li class="{% if page == paginator.page %} active {% endif %}">
+			  {% if page == 1 %}
+			    <a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+			  {% else %}
+			    <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+			  {% endif %}
+			  </li>
+			{% endfor %}
+			{% if paginator.next_page %}
+			<li><a href="{{ BASE_PATH }}{{ paginator.next_page_path }}" title="Next page">&raquo;</a></li>
+			{% else %}
+			<li class="disabled"><a title="Next page">&raquo;</a></li>
+			{% endif %}
+		</ul>
+		{% endif %}
+    
+  </div>
+  <div class="col-sm-4">
+  	Right bars
+  </div>
+</div>
