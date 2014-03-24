@@ -35,6 +35,8 @@ Usage:
       {% endif %}
     {% endif %}
   {% endfor %}
+  {% if group == 'navigation' %}
   		<li><a href="{{ site.github_page }}">Contribute</a></li>
+  {% endif %}
 {% assign pages_list = nil %}
 {% assign group = nil %}

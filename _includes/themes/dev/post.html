@@ -40,31 +40,8 @@
     {% include JB/comments %}
   </div>
 	<div class="col-sm-3">
-		{% unless site.posts == empty %}
-		<div class="panel panel-default">
-			<div class="panel-heading"><h3 class="panel-title"><strong>Recent posts</strong></h3></div>
-			<div class="list-group">	
-		      {% assign latest_posts = site.posts %}
-		  	  {% assign posts_no = 5 %}  
-		  	  {% include misc/latest_posts %}
-		  	 </div>
-		 </div>
-		{% endunless %}
-		
-		{% unless page.tags == empty %}
-		<div class="panel panel-default">
-			<div class="panel-heading"><h3 class="panel-title"><strong>Tags</strong></h3></div>
-			<ul class="list-group">
-				{% assign tags_list = page.tags %}
-				{% include JB/tags_list %}
-			</ul>
-		</div>
-		{% endunless %}
-	
-	 	<div class="panel panel-default">
-	 		<div class="panel-body">
-				{% include misc/contribution_text %}
-	 		</div>
-	  	 </div>
+		{% assign show_sidebar_tags = true %}
+		{% assign sidebar_tags = page.tags %}
+		{% include misc/sidebar %}
 	</div>
 </div>

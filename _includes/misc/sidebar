@@ -1,0 +1,52 @@
+{% comment %}<!--
+The sidebar shows the right sidebar with the latest posts tags and contribution boxes.
+Usage:
+  1) assign show_sidebar_tags to a valid arrays of tags, or nothing if you want the current page tags
+  2) set the variable show_tags_sidebar if you want the tags to be shown
+  3) set the variable sidebar_posts_no if you want a different number of latest posts than the default
+  4) include misc/sidebar
+  example:
+  	  {% assign sidebar_tags = site.tags %}
+  	  {% assign show_sidebar_tags = true %}
+  	  {% assign sidebar_posts_no = 10 %} 
+  	  {% include misc/sidebar %}
+  	  
+  	  or
+  	  
+  	  {% include misc/sidebar %}
+  	
+-->{% endcomment %}
+
+		{% unless site.posts == empty %}
+		<div class="panel panel-default">
+			<div class="panel-heading"><h3 class="panel-title"><strong>Recent posts</strong></h3></div>
+			<div class="list-group">	
+		      {% assign latest_posts = site.posts %}
+		      {% if sidebar_posts_no != nil %}
+		      	{% assign posts_no = sidebar_posts_no %}
+		      {% else %}
+		  	  	{% assign posts_no = 5 %}
+		  	  {% endif %}  
+		  	  {% include misc/latest_posts %}
+		  	 </div>
+		 </div>
+		{% endunless %}
+
+		{% if show_sidebar_tags == true %}
+		{% unless sidebar_tags == empty %}
+		<div class="panel panel-default">
+			<div class="panel-heading"><h3 class="panel-title"><strong>Tags</strong></h3></div>
+			<ul class="list-group">
+				{% assign tags_list = sidebar_tags %}
+				{% include JB/tags_list %}
+			</ul>
+		</div>
+		{% endunless %}
+		{% endif %}
+	
+	 	<div class="panel panel-default">
+	 		<div class="panel-body">
+				{% include misc/contribution_text %}
+	 		</div>
+	  	 </div>
+	  	 {% assign show_sidebar_tags == nil %} {% assign sidebar_tags == nil %}{% assign sidebar_posts_no = nil %}
