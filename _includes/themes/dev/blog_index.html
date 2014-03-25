@@ -16,16 +16,16 @@
 			<div>
 			{{ post.excerpt }}
 			</div>
+
+			<div> 
+				<a href="{{ post.url }}" class="btn btn-primary">Read more &amp; discuss &hellip;</a>
+			</div>	
 		
-			<div class="breadcrumb post-share">
+			<div class="breadcrumb index-share">
 				{% capture share_url %}{{site.production_url}}{{post.url}}{% endcapture %}
 				{% assign share_title = post.title %}
 				{% include custom/sharing %}
 			</div>
-		
-			<div> 
-				<a href="{{ post.url }}" class="btn btn-primary">more &rarr;</a>
-			</div>	
 			
 			<hr {% if forloop.last == false %}class="soften post"{% endif %}/>
 		{% endfor %}
