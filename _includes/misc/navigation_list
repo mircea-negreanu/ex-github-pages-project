@@ -33,6 +33,7 @@ Usage:
 	{% if num_parts == 2 %}
 		{% assign file = file | remove: ".html" %}
 	{% endif %}
+	{{ node.url }}
 	{% if navigation_order contains file or node.url == "/index.html" %}
 		{% assign navigation_href = navigation_href | append:'|' | append:node.url %}
 		{% assign navigation_titles = navigation_titles | append:'|' | append:node.title %}
