@@ -4,6 +4,7 @@ title: "Adding a test post"
 description: ""
 tags: [tag1, tag2]
 tagline: "Introduction"
+updated_on: '2014-03-25'
 ---
 {% include JB/setup %}
 

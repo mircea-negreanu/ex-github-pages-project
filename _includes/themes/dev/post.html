@@ -6,6 +6,9 @@
 
 	    <div class="date">
 			<span>{{ page.date | date_to_long_string }}</span>
+			{% if page.updated_on != nill %}
+			<span class="updated text-muted">(Updated on {{ page.updated_on | date_to_long_string }})</span>
+			{% endif %}
 	    </div>
 	    
 	    <div class="tag_labels">
