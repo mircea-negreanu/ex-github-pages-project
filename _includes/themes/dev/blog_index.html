@@ -8,11 +8,13 @@
 
 		{% for post in paginator.posts %}
 			<h2><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h2>
-			<p class="author muted"> Posted on <span class="date">{{ post.date | date: "%B %e, %Y" }}</span>
-			{% if post.category %}
-				in <span class="category">	<a href="{{ BASE_PATH }}{{ site.JB.categories_path }}#{{ post.category }}-ref">{{ post.category }}</a></span>
-			{% endif %}
+			<p class="author muted"> Posted on <span class="date">{{ post.date | date: "%B %e, %Y" }}</span></p>
+			
+			<p class="tag_labels">
+				{% assign tags_list = post.tags %}
+				{% include misc/tags_labels %}
 			</p>
+			
 			<div>
 			{{ post.excerpt }}
 			</div>

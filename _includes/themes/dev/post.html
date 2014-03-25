@@ -7,19 +7,15 @@
 	    <div class="date">
 			<span>{{ page.date | date_to_long_string }}</span>
 	    </div>
+	    
+	    <div class="tag_labels">
+			{% assign tags_list = page.tags %}
+			{% include misc/tags_labels %}
+		</div>
+	    
 		<div class="content">
 		  {{ content }}
 		</div>
-
-  {% comment %}
-  {% unless page.categories == empty %}
-		<ul class="tag_box inline">
-			<li><span class="glyphicon glyphicon-folder-open"></span></li>
-			{% assign categories_list = page.categories %}
-			{% include JB/categories_list %}
-		</ul>
-  {% endunless %}
-  {% endcomment %}  
 		
 		<div class="breadcrumb">
 		{% include custom/sharing %}
