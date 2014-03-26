@@ -58,16 +58,17 @@ custom_settings:
   navigation_order:
     -
       page: home
-      icon: glyphicon-home
+      icon: fa-home
     -
       page: tags
-      icon: glyphicon-tags
+      icon: fa-tags
     -
       page: about
     -
       page: custom_page
       title: Contribute
       link: https://github.com/mircea-negreanu/mircea-negreanu.github.io
+      icon: fa-code-fork
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #

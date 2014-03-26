@@ -71,7 +71,7 @@ Usage:
 		{% endfor %}
 	{% endif %}
 	{% if title %}
-	<li{% if active == true %} class="active"{% endif %}><a href="{{ BASE_PATH }}{{node_url}}"{%if active == true %} class="active" {% endif %}>{% if icon %}<span class="glyphicon {{ icon }}"></span> {% endif %}{{title}}</a></li>
+	<li{% if active == true %} class="active"{% endif %}><a href="{{ BASE_PATH }}{{node_url}}"{%if active == true %} class="active" {% endif %}>{% if icon contains "glyphicon-" %}<span class="glyphicon {{ icon }}"></span>{% elsif icon contains "fa-" %}<i class="fa {{ icon }} fa-lg"></i>{% endif %} {{title}}</a></li>
 	{% endif %}
 {% endfor %}
 {% if dropdown_started == true %}
