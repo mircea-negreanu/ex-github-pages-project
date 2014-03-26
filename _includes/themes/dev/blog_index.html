@@ -30,8 +30,7 @@
 				{% assign share_title = post.title %}
 				{% include custom/sharing %}
 			</div>
-			
-			<hr {% if forloop.last == false %}class="soften post"{% endif %}/>
+			{% if forloop.last == false %} <hr/> {% endif %}
 		{% endfor %}
 
 		{% if paginator.total_pages > 1 %}
