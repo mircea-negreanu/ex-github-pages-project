@@ -49,4 +49,14 @@ Usage:
 				{% include misc/contribution_text %}
 	 		</div>
 	  	 </div>
+	  	 
+	  	 {% if show_sidebar_tags != true %}
+	  	 {% unless sidebar_tags == empty %}
+		<ul class="tag_cloud_box">
+			{% assign tags_list = site.tags %}
+			{% assign end-size = 35 %}
+			{% include misc/tag_cloud %}
+		</ul>	  	 
+	  	 {% endunless %}
+	  	 {% endif %}
 	  	 {% assign show_sidebar_tags == nil %} {% assign sidebar_tags == nil %}{% assign sidebar_posts_no = nil %}

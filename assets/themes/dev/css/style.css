@@ -26,3 +26,11 @@
 	margin-top: 10px;
 }
  
+.tag_cloud_box {
+	margin-left: 0px;
+	padding-left: 0px;
+}
+
+.tag_cloud_box li{
+	display: inline;
+}
