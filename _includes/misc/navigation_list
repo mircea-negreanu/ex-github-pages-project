@@ -21,7 +21,7 @@ Usage:
   This helper can be seen in use at: ../_layouts/default.html
 -->{% endcomment %}
   {% for order in site.custom_settings.navigation_order %}
-  	{% if order.page != 'custom_page' %}
+  	{% if order.page != 'custom_page' and order.page != 'start_dropdown' and order.page != 'end_dropdown' and order.page != 'menu_separator' %}
   		{% assign navigation_order = navigation_order | append: ' ' | append: order.page %}
   	{% endif %}
   {% endfor %}
@@ -30,9 +30,7 @@ Usage:
 	{% assign url_parts = node.url | remove: '/index.html' | split: '/' %}
 	{% assign file = url_parts | last %}
 	{% assign num_parts = url_parts | size %}
-	{% if num_parts == 2 %}
-		{% assign file = file | remove: ".html" %}
-	{% endif %}
+	{% if num_parts == 2 %} {% assign file = file | remove: ".html" %} {% endif %}
 	{% if navigation_order contains file or node.url == "/index.html" %}
 		{% assign navigation_href = navigation_href | append:'|' | append:node.url %}
 		{% assign navigation_titles = navigation_titles | append:'|' | append:node.title %}
@@ -44,16 +42,21 @@ Usage:
 {% assign navigation_titles_arr = navigation_titles | split: '|' %}
 {% assign navigation_file_arr = navigation_file | split: '|' %}
 
+{% assign dropdown_started = false %}
 {% for node_order in site.custom_settings.navigation_order %}
 	{% assign title = nil %}{% assign active = false %}{% assign node_url = nil %}{% assign icon = nil %}
-	{% comment %}
-	{% if node_order.page == 'home' %}
-		{% assign node_url = HOME_PATH %}{% assign title = 'Home' %}
-		{% if page.url == '/index.html' %}{% assign active = true %}{% endif %}
-		{% if node_order.icon != icon %}{% assign icon = node_order.icon %}{% endif %}
-	{% endif %}
-	{% endcomment %}
-	{% if node_order.page == 'custom_page' %}
+	{% if node_order.page == 'start_dropdown' %}
+		{% assign dropdown_started = true %}
+	<li class="dropdown">
+		<a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ node_order.title }} <b class="caret"></b></a>
+		<ul class="dropdown-menu">
+	{% elsif node_order.page == 'end_dropdown' %}
+		{% assign dropdown_started = false %}
+		</ul>
+	</li>
+	{% elsif node_order.page == 'menu_separator' %}
+		<li class="divider"></li>
+	{% elsif node_order.page == 'custom_page' %}
 		{% assign node_url = node_order.link %}
 		{% assign title = node_order.title %}
 		{% if node_order.icon != nil %}{% assign icon = node_order.icon %}{% endif %}
@@ -71,6 +74,9 @@ Usage:
 	<li{% if active == true %} class="active"{% endif %}><a href="{{ BASE_PATH }}{{node_url}}"{%if active == true %} class="active" {% endif %}>{% if icon %}<span class="glyphicon {{ icon }}"></span> {% endif %}{{title}}</a></li>
 	{% endif %}
 {% endfor %}
+{% if dropdown_started == true %}
+		</ul>
+	</li>
+{% endif %}
 
-{% assign pages_list = nil %}
-{% assign group = nil %}
+{% assign pages_list = nil %}{% assign group = nil %}
