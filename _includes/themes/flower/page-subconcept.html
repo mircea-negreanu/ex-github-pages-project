@@ -35,21 +35,21 @@
 	
 	<div class="tab-content">
 		<div class="tab-pane active" id="{{ _page_tab-id }}">
-			<div class="row-fluid">
-				<div class="span3 bs-docs-sidebar">
-					<ul class="nav nav-list bs-docs-sidenav" >
+			<div class="row">
+				<div class="col-sm-3 bs-docs-sidebar">
+					<ul class="nav nav-pills nav-stacked bs-docs-sidenav" >
 					{% assign page_order = _page_order | split:' ' %}
 					{% for next_node in page_order %}
 						{% for node in pages_list %}
 							{% assign node_name = node.url | split: '/' | last | remove: '.html' %}
 							{% if node_name == next_node and group == node.group and parent-id == node.parent-id and node.title != null %}
-						<li><a href="#{{ node.title | replace:' ','' | replace:'.','' }}"><i class="icon-chevron-right"></i> {{ node.title }}</a></li>
+						<li><a href="#{{ node.title | replace:' ','' | replace:'.','' }}"><span class="glyphicon glyphicon-chevron-right"></span> {{ node.title }}</a></li>
 							{% endif %}
 						{% endfor %}
 					{% endfor %}					
 					</ul>
 				</div>
-				<div class="span9">
+				<div class="col-sm-9">
 				{% assign remove_string = '{' | append: '%' | append: ' include JB/setup ' | append: '%'  | append: '}' %}
 				{% for next_node in page_order %}
 					{% for node in pages_list %}
