@@ -18,7 +18,7 @@ h3 code {
 
 /* Tweak navbar brand link  */
 body > .navbar {
-  /*font-size: 13px;*/
+	font-size: 13px;
 }
 
 nav.navbar {
@@ -420,9 +420,11 @@ div.post-head {
   .navbar .btn-navbar {
     margin-right: 5px;
   }
-  
+}
+
+@media (max-width: 768px) {
   body > .navbar .navbar-brand {
-	height: 32px;
+	height: 49px;
 	width: 185px;
 	background: url(/assets/imgs/logo_flower-platform_long_h32.png) no-repeat center center;
   }
