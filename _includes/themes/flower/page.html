@@ -1,4 +1,4 @@
-{% if page.title %}
+{% if page.title and page.show_title != false %}
 <div class="page-header {% if page.labels %}page-header-labels{% endif %}">
   <h1>{{ page.title }} {% if page.tagline %} <small>{{ page.tagline }}</small>{% endif %}</h1>
 </div>
