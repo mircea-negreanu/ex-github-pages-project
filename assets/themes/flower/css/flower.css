@@ -94,6 +94,11 @@ ul.homepage li
 	padding-left: 20px;
 }
 
+/* breadcrumb */
+.breadcrumb-no-separator > li + li:before {
+	content: "";
+}
+
 /* Sections */
 
 /* padding for in-page bookmarks and fixed navbar */
