@@ -36,7 +36,20 @@ Usage:
 		{% assign navigation_titles = navigation_titles | append:'|' | append:node.title %}
 		{% assign navigation_file = navigation_file | append:'|' | append:file %}
 	{% endif %}
+	{% if site.custom_settings.concepts.active == true and node.concepts-home == true %}{% assign concepts_node = node %}{% endif %}
   {% endfor %}
+  
+  {% if site.custom_settings.concepts.active == true && concepts_node %}
+	{% assign concepts_file = concepts_node.url | remove: '/index.html' | split: '/' | last %}
+	{% assign concepts_first = concepts_node.order | split: ' ' | first %}
+	{% for node in pages_list %}
+		{% assign node_first = node.url | remove: '/index.html' | split: '/' | last %}
+		{% if node_first == concepts_first %}
+			{% assign concepts_url = node.url %}
+			{% break %}
+		{% endif %}
+	{% endfor %}
+  {% endif %}
   
   {% assign navigation_href_arr = navigation_href | split: '|' %}
 {% assign navigation_titles_arr = navigation_titles | split: '|' %}
@@ -66,7 +79,13 @@ Usage:
 				{% assign node_url = navigation_href_arr[forloop.index0] %}{% assign title = navigation_titles_arr[forloop.index0] %}
 				{% if node_url == page.url %}{% assign active=true %}
 				{% elsif node_order.page == site.custom_settings.paginate_for and page.url contains "/page" %}{% assign active=true %}
-				{% elsif node_order.page == site.custom_settings.blog.blog_name and page.url contains site.custom_settings.blog.blog_path %}{% assign active=true %}{% endif %}
+				{% elsif node_order.page == site.custom_settings.blog.blog_name and page.url contains site.custom_settings.blog.blog_path %}{% assign active=true %}
+				{% elsif site.custom_settings.concepts.active == true and node == concepts_file %}{% unless page.url contains site.custom_settings.blog.blog_path %}
+					{% assign node_url = concepts_url %}
+					{% if page.id or page.parent-id or page.concepts-home %}
+						{% assign active = true %}
+					{% endif %}
+				{% endunless %}{% endif %}
 				{% if node_order.icon != nil %}{% assign icon = node_order.icon %}{% endif %}
 				{% break %}
 			{% endif %}

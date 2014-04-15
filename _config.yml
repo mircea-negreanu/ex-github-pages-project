@@ -52,7 +52,7 @@ custom_settings:
       page: home
       icon: glyphicon-home
     -
-      page: smart-structure-diagrams
+      page: concepts
     -
       page: screenshots
     -
@@ -86,6 +86,12 @@ custom_settings:
   # What link to be active when the pagination (/page) is encontered
   #  
   paginate_for: blog
+  #
+  # If the concepts is active and what is the base path for them
+  #
+  concepts:
+    active: true
+    name: concepts
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
