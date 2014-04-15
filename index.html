@@ -5,24 +5,28 @@ hero: true
 {% include JB/setup %}
 
 
-<div class="hero-unit hero-homepage">
-	<div class="modal hide" id="flowerModal" tabindex="-1">
-		 <div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-			<h3>Flower Platform. Get Started on another you!</h3>
-		</div>
-		<div class="modal-body flex-video widescreen" >
+<div class="jumbotron hero-homepage">
+	<div class="modal fade" id="flowerModal" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				 <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h3>Flower Platform. Get Started on another you!</h3>
+				</div>
+				<div class="modal-body flex-video widescreen" >
+				</div>
+			</div>
 		</div>
 	</div>
 	
-	<div class="row-fluid">
-		<div class="span6 homepage-center">
+	<div class="row">
+		<div class="col-sm-6 homepage-center">
 			<img src="{{ BASE_PATH }}/assets/imgs/logo_flower-platform.png" alt="Flower Platform Logo"/>
 			<p style="color: #666666">Smart <span style="color: #F05A28">diagrams</span> that connect to your code & dev tools</p>
 			<a href="/demo.html" class="btn btn-primary btn-large">Demo</a>
 		</div>
 		
-		<div class="span6">
+		<div class="col-sm-6">
 			<div class="thumbnail" id="movie-image">
 				<img src="{{ BASE_PATH }}/assets/imgs/flower-platform-video.png" alt="Flower Platform Presentation" />
 				
@@ -63,25 +67,25 @@ hero: true
 </div>
 
 {% comment %}
-<div class="row-fluid">
-	 <div class="span4">
-		 <div class="hero-unit">
+<div class="row">
+	 <div class="sol-sm-4">
+		 <div class="jumbotron">
 			 <h2>Blog</h2>
 			 <p>See what the team behing Flower Platform is up to.</p>
 			 <p><a class="btn" href="{{ BASE_PATH }}blog.html">Blog &raquo;</a></p>
 		 </div>
 	 </div><!-- .span4 -->
 
-	 <div class="span4">
-		<div class="hero-unit">
+	 <div class="col-sm-4">
+		<div class="jumbotron">
 			<h2>Features</h2>
 			<p>Things that you can do with the Flower Platform </p>
 			<p><a class="btn" href="{{ BASE_PATH }}features.html">Features &raquo;</a></p>
 		</div>
 	</div><!-- .span4 -->
 
-	<div class="span4">
-		<div class="hero-unit">
+	<div class="col-sm-4">
+		<div class="jumbotron">
 			<h2>Tutorials</h2>
 			<p>How to use the Flower Platform. </p>
 			<p><a class="btn" href="{{ BASE_PATH }}tutorials.html">Tutorials &raquo;</a></p>
