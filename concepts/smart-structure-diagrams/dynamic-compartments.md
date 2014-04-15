@@ -57,7 +57,8 @@ The UML notation uses "attributes" and "operations" to show the contents of a cl
 		
 		// ...
 		
-For such a case, Flower Platform could create 2 compartments: *parse logic* and *socket communication logic*, instead of the classic "attributes" and "operations" compartment. 
+For such a case, Flower Platform could create 2 compartments: *parse logic* and *socket communication logic*, instead of the classic "attributes" and "operations" compartment.
+ 
 * The CodeSync algorithm would generate and parse the special separator blocks (i.e. `///////////////` ...).
 * Dynamic compartments could be added/deleted/moved up/down from the diagram UI
 * The separator patterns could be configurable; e.g. `///////////` or `/******************`, or `//########################`etc.  

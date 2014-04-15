@@ -17,13 +17,15 @@ share: true
 
 Flower Platform (server) will integrate with the following wiki systems:
 
-* [GitHub wiki] (https://github.com/features/projects/wikis) with MarkDown syntax
-* [DokuWiki] (http://dokuwiki.org/)
+* [GitHub wiki](https://github.com/features/projects/wikis) with MarkDown syntax
+* [DokuWiki](http://dokuwiki.org/)
 
-The data from wiki will be shown on [mindmap diagrams] (../mindmap-diagrams).
+The data from wiki will be shown on [mindmap diagrams](../mindmap-diagrams).
 
 <!-- label:ideas -->
+
 Support additional wiki software:
-* [GitHub wiki] (https://github.com/features/projects/wikis) / other syntaxes 
-* [MediaWiki] (http://www.mediawiki.org)
+
+* [GitHub wiki](https://github.com/features/projects/wikis) / other syntaxes 
+* [MediaWiki](http://www.mediawiki.org)
 * etc.

@@ -22,13 +22,16 @@ The following programming languages are currently supported:
 </ul>
 
 <!-- label:in-progress -->
+
 The following programming languages will be supported starting with Flower Platform 2.\*.
+
 * JavaScript
 * Python
 * Ruby
 * PHP
 
 <!-- label:ideas -->
+
 * C++
 * C#
 * Scala 

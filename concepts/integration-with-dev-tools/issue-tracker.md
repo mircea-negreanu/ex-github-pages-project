@@ -17,20 +17,24 @@ share: true
 
 Flower Platform (server) will integrate with the following issue trackers:
 
-* [GitHub] (https://github.com/features/projects/issues)
+* [GitHub](https://github.com/features/projects/issues)
 
-The data from issue trackers will be shown on [mindmap diagrams] (../mindmap-diagrams).
+The data from issue trackers will be shown on [mindmap diagrams](../mindmap-diagrams).
 
 <!-- label:ideas -->
+
 Support additional issue trackers:
-* [Redmine] (http://www.redmine.org)
-* [JIRA] (http://www.atlassian.com/software/jira)
-* [Trac] (http://trac.edgewall.org/)
-* [Bugzilla] (http://www.bugzilla.org/)
+
+* [Redmine](http://www.redmine.org)
+* [JIRA](http://www.atlassian.com/software/jira)
+* [Trac](http://trac.edgewall.org/)
+* [Bugzilla](http://www.bugzilla.org/)
 * etc.
 
 <!-- label:ideas -->
+
 Flower Platform might show data from issue trackers (i.e. issues) on Gantt diagrams as well. Depending on the issue tracker API, we might see on a Gantt diagram:
+
 * the issues with time related details (planned start, end, actual start, end)
 * work logs
 * relations between issues (blocked by, precedes, etc.) 

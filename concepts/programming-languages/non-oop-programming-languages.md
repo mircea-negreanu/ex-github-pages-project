@@ -22,9 +22,11 @@ E.g. a source file with C code can be represented as a box, the same way a Java 
 </div> 
 
 <!-- label:ideas -->
+
 We plan to support the C programming language, because there are a lot of open-source communities that develop code in C and could take advantage of Flower Platform. 
 
 <!-- label:in-progress -->
+
 Besides the languages that don't support object oriented programming (e.g. C), most of the OOP languages allow the developer to write code in a non-OOP manner. E.g. PHP, JavaScript. We plan to support this kind of constructs.
 
 <div class="alert alert-info">

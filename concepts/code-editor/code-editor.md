@@ -18,6 +18,7 @@ share: true
 <img class="img-polaroid" style="float:right" src="code-editor.png"/>
 
 When working with Flower Platform from a web browser or mobile, we may need to access the code:
+
 * either in read mode: browse source files that have the syntax highlighted
 * or in write mode: e.g. write comments, snippets of code or pseudo-code during a collaboration session
 
@@ -25,6 +26,7 @@ Flower Platform supports basic editor operation: create file, open file, save fi
 
 <!-- label:ideas -->
 It would be nice to integrate an existing web based editor. E.g. :
+
 * <http://brackets.io/>
 * <http://ajaxorg.github.io/ace/>
 * The editor used by <http://www.eclipse.org/orion/>

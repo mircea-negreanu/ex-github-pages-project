@@ -23,7 +23,7 @@ title: "Roadmap"
 
 * March 11, 2013: Crispico starts working at Flower Platform 2.0. A rewrite of the existing products, having as goals: mobile support, multiple programming languages & dev tools support. And ultimate performance.
 
-The releases can be found on the [blog section] (blog/categories.html#releases-ref)
+The releases can be found on the [blog section](blog/categories.html#releases-ref)
 
 #Roadmap
 

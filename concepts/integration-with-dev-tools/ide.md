@@ -18,6 +18,7 @@ share: true
 Flower Platform was initially an Eclipse plugin. Then it was "promoted" to a server product (Eclipse based as well) with advanced features such as real-time collaboration.
 
 Flower Platform 2.* will be available as an Eclipse plugin as well. Feature highlights:
+
 * super fast. 
 * workflow designed to work together with Flower Platform server, to allow collaboration directly from IDE.  
 
