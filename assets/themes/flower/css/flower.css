@@ -1,0 +1,515 @@
+/* Body/Structure */
+body {
+  position: relative;
+  padding-top: 60px;
+}
+
+/* Code in headings */
+h3 code {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.hero-homepage {
+	margin-bottom: 20px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+/* Tweak navbar brand link  */
+body > .navbar {
+  font-size: 13px;
+}
+
+ul.rate_button {
+	line-height: 28px;
+}
+
+.page-header-labels {
+	margin-bottom: 10px;
+}
+
+body > .navbar .brand {
+	padding: 4px 2px 2px 10px;
+	height: 32px;
+	width: 185px;
+	background: url(/assets/imgs/logo_flower-platform_long_h32.png) no-repeat center center;
+}
+
+body > .navbar .brand:hover {
+  text-decoration: none;
+  text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.4);
+}
+
+/* Fork github image */
+.fork_github {
+	position: fixed; 
+	top: 0; 
+	right: 0; 
+	border: 0; 
+	z-index: 1040;
+}
+
+#movie-image {
+	position: relative;
+}
+
+#movie-image a {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 1;
+	background: url(/assets/imgs/play-button.png) no-repeat center center;
+}
+
+#movie-image p {
+	margin: 5px 0 3px 0;
+	text-align: center;
+	font-size: 15px;
+}
+
+ul.homepage
+{
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+ul.homepage li
+{
+	background-image: url(/assets/imgs/orange-bullet.png);
+	background-repeat: no-repeat;
+	background-position: 0px 3px; 
+	padding-left: 20px;
+}
+
+/* Sections */
+
+/* padding for in-page bookmarks and fixed navbar */
+section {
+  padding-top: 30px;
+}
+section > .page-header,
+section > .lead {
+  color: #5a5a5a;
+}
+section > ul li {
+  margin-bottom: 5px;
+}
+
+/* Separators (hr) */
+.bs-docs-separator {
+  margin: 40px 0 39px;
+}
+
+/* Faded out hr */
+hr.soften {
+  height: 1px;
+  margin: 70px 0;
+  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+  background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+  background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+  background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+  border: 0;
+}
+
+hr.post {
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+
+hr.concepts {
+	margin-top: 30px;
+	margin-bottom: 0px;
+}
+
+hr.concepts-labels {
+	margin-top: 10px;
+	margin-bottom: 15px;
+}
+
+/* Social proof buttons from GitHub & Twitter */
+.bs-docs-social {
+  padding: 15px 0;
+  text-align: center;
+  background-color: #f5f5f5;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #ddd;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+
+/* Quick links on Home */
+.bs-docs-social-buttons {
+  margin-left: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+.bs-docs-social-buttons li {
+  display: inline-block;
+  padding: 5px 8px;
+  line-height: 1;
+  *display: inline;
+  *zoom: 1;
+}
+
+/* Subhead (other pages) */
+.subhead {
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+.subhead h1 {
+  font-size: 60px;
+}
+.subhead p {
+  margin-bottom: 20px;
+}
+.subhead .navbar {
+  display: none;
+}
+
+
+/* Footer */
+
+.footer {
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 70px;
+  border-top: 1px solid #e5e5e5;
+  background-color: #f5f5f5;
+}
+.footer p {
+  margin-bottom: 0;
+  color: #777;
+}
+.footer-links {
+  margin: 10px 0;
+}
+.footer-links li {
+  display: inline;
+  padding: 0 2px;
+}
+.footer-links li:first-child {
+  padding-left: 0;
+}
+
+/* Sidenav for Docs */
+
+.bs-docs-sidenav {
+  width: 228px;
+  margin: 30px 0 0;
+  padding: 0;
+  background-color: #fff;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+  -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.065);
+     -moz-box-shadow: 0 1px 4px rgba(0,0,0,.065);
+          box-shadow: 0 1px 4px rgba(0,0,0,.065);
+}
+.bs-docs-sidenav > li > a {
+  display: block;
+  width: 190px \9;
+  margin: 0 0 -1px;
+  padding: 8px 14px;
+  border: 1px solid #e5e5e5;
+}
+.bs-docs-sidenav > li:first-child > a {
+  -webkit-border-radius: 6px 6px 0 0;
+     -moz-border-radius: 6px 6px 0 0;
+          border-radius: 6px 6px 0 0;
+}
+.bs-docs-sidenav > li:last-child > a {
+  -webkit-border-radius: 0 0 6px 6px;
+     -moz-border-radius: 0 0 6px 6px;
+          border-radius: 0 0 6px 6px;
+}
+.bs-docs-sidenav > .active > a {
+  position: relative;
+  z-index: 2;
+  padding: 9px 15px;
+  border: 0;
+  text-shadow: 0 1px 0 rgba(0,0,0,.15);
+  -webkit-box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
+     -moz-box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
+          box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
+}
+/* Chevrons */
+.bs-docs-sidenav .icon-chevron-right {
+  float: right;
+  margin-top: 2px;
+  margin-right: -6px;
+  opacity: .25;
+}
+.bs-docs-sidenav > li > a:hover {
+  background-color: #f5f5f5;
+}
+.bs-docs-sidenav a:hover .icon-chevron-right {
+  opacity: .5;
+}
+.bs-docs-sidenav .active .icon-chevron-right,
+.bs-docs-sidenav .active a:hover .icon-chevron-right {
+  background-image: url(../img/glyphicons-halflings-white.png);
+  opacity: 1;
+}
+.bs-docs-sidenav.affix {
+  top: 40px;
+}
+.bs-docs-sidenav.affix-bottom {
+  position: absolute;
+  top: auto;
+  bottom: 270px;
+}
+
+/* Blog */
+/* post-full*/
+.post-full .date {
+	margin-bottom: 20px;
+	font-weight: bold; 
+}
+
+.tag_box a span {
+	vertical-align: super;
+	font-size: 0.8em; 
+	background: #eee;
+	border-radius: 5px;
+	text-decoration: none;
+	border: 1px solid #cccccc; 
+	padding: 1px 2px 1px 2px;
+	color: black;
+	
+}
+
+.tag_cloud_box {
+	margin-left: 0px;
+}
+
+.tag_cloud_box li{
+	display: inline;
+}
+
+.author .date {
+	font-weight: bold;
+}
+
+body .fb-like {
+	display: inline;	
+}
+
+#fb-root {
+	display: inline;
+}
+
+div.post-share {
+	padding: 8px 10px 4px;
+}
+
+div.post-head {
+	padding-bottom: 2px;
+	margin-bottom: 10px;
+}
+
+.oscon {
+	width: 100%;
+	padding-bottom: 20px;
+}
+
+.oscon img {
+	display: block;
+	margin: auto;
+}
+
+.post-full .breadcrumb {
+	margin-top: 20px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 1199px) {
+	body > .navbar .brand {
+		height: 32px;
+		width: 32px;
+		background: url(/assets/imgs/logo_flower-platform_short_h32.png) no-repeat center center;
+	}
+}
+
+/* Desktop large */
+@media (min-width: 1200px) {
+  .bs-docs-sidenav {
+    width: 258px;
+  }
+  .bs-docs-sidenav > li > a {
+    width: 230px \9; /* Override the previous IE8-9 hack */
+  }
+
+  .modal {
+  	width: 800px;
+  	margin-left: -400px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1199px) {
+	#movie-image {
+		margin-top: 25px;
+	}
+}
+
+@media (max-width: 1128px) {
+	.fork_github {
+    	display: none;
+  	}
+}
+
+@media (min-width: 981px) {
+	.modal {
+		width: 800px;
+		margin-left: -400px;
+	}
+}
+
+.homepage-center {
+	text-align: center;
+	vertical-align: baseline;
+	padding-top: 10px;
+}
+
+/* Desktop
+------------------------- */
+@media (max-width: 980px) {
+  /* Unfloat brand */
+  body > .navbar-fixed-top .brand {
+    float: left;
+    margin-left: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  /* Inline-block quick links for more spacing */
+  .quick-links li {
+    display: inline-block;
+    margin: 5px;
+  }
+
+  /* When affixed, space properly */
+  .bs-docs-sidenav {
+    top: 0;
+    width: 218px;
+    margin-top: 30px;
+    margin-right: 0;
+  }
+  
+  .fork_github {
+	display: none;
+  }
+  .navbar .btn-navbar {
+    margin-right: 5px;
+  }
+  
+  body > .navbar .brand {
+	height: 32px;
+	width: 185px;
+	background: url(/assets/imgs/logo_flower-platform_long_h32.png) no-repeat center center;
+  }
+}
+
+/* Tablet to desktop
+------------------------- */
+@media (min-width: 768px) and (max-width: 979px) {
+  /* Remove any padding from the body */
+  body {
+    padding-top: 0;
+  }
+  /* Adjust sidenav width */
+  .bs-docs-sidenav {
+    width: 166px;
+    margin-top: 20px;
+  }
+  .bs-docs-sidenav.affix {
+    top: 0;
+  }
+
+	.modal {
+		width: 680px;
+		margin-left: -340px;
+	}
+}
+
+/* Tablet
+------------------------- */
+@media (max-width: 767px) {
+  /* Remove any padding from the body */
+  body {
+    padding-top: 0;
+  }
+
+  .bs-docs-social {
+    margin: 0 -20px;
+  }
+
+  /* Sidenav */
+  .bs-docs-sidenav {
+    width: auto;
+    margin-bottom: 20px;
+  }
+  .bs-docs-sidenav.affix {
+    position: static;
+    width: auto;
+    top: 0;
+  }
+
+  /* Unfloat the back to top link in footer */
+  .footer {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .footer p {
+    margin-bottom: 9px;
+  }
+}
+
+/* Landscape phones
+------------------------- */
+@media (max-width: 480px) {
+  /* Remove padding above jumbotron */
+  body {
+    padding-top: 0;
+  }
+
+  /* Change up some type stuff */
+  h2 small {
+    display: block;
+  }
+
+  /* Examples: modal */
+  .modal-example .modal {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+  }
+
+  /* Tighten up footer */
+  .footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+@media print {
+  .fork_github {
+    display: none;
+  }
+}
+
+.label-in-progress,.badge-in-progress{background-color:#E6E635;}
+.label-ideas,.badge-ideas{background-color:#3a87ad;}
+.label-implemented,.badge-implemented{background-color:#468847;}
+.label-planned,.badge-planned{background-color:#f89406;}

@@ -1,1 +1,1 @@
-# My dev site
+Flower Platform site page.

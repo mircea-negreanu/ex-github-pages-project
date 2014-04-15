@@ -1,97 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<!-- Enable responsive viewport -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		
-		<title>{{ page.title }}</title>
-		
-		{% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
-		<meta name="author" content="{{ site.author.name }}">
+  <head>
+    <meta charset="utf-8">
+    <title>{% if page.url == "/index.html" %}Flower Platform{% else %}{{ page.title }} &bull; Flower Platform{% endif %}</title>
+    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+    <meta name="author" content="{{ site.author.name }}">
 
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	{% assign redirect_url = nil %}
+	{% if page.redirect == true and page.concepts-home == true %}
+		{% assign first_tab = page.order | split: ' ' | first %}
+		
+		{% for node in site.pages %}
+			{% assign node_last = node.url | remove: '/index.html' | split: '/' | last %}
+			{% if node_last == first_tab %}
+				{% assign redirect_url = node.url %}
+			{% endif %}
+		{% endfor %}
+	{% elsif page.redirect_url %}
+		{% assign redirect_url = page.redirect_url %}
+	{% endif %}
+	{% if redirect_url %}
+<script type="text/javascript">
+<!--
+	window.location = "{{redirect_url}}"
+//-->
+</script>
+	{% endif %}
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-		<!-- Le styles -->
-		<link href="{{ ASSET_PATH }}/css/bootstrap.min.css" rel="stylesheet" type="text/css" title="default">
-		<link href="{{ ASSET_PATH }}/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" title="default">
-		
-		<link href="{{ ASSET_PATH }}/css/cerulean-bootstrap.min.css" rel="alternate stylesheet" type="text/css" title="cerulean">
-		<link href="{{ ASSET_PATH }}/css/cosmo-bootstrap.min.css" rel="alternate stylesheet" type="text/css" title="cosmo">
-		<link href="{{ ASSET_PATH }}/css/flatly-bootstrap.min.css" rel="alternate stylesheet" type="text/css" title="flatly">
-		<link href="{{ ASSET_PATH }}/css/journal-bootstrap.min.css" rel="alternate stylesheet" type="text/css" title="journal">
-		<link href="{{ ASSET_PATH }}/css/readable-bootstrap.min.css" rel="alternate stylesheet" type="text/css" title="readable">
-		<link href="{{ ASSET_PATH }}/css/simplex-bootstrap.min.css" rel="alternate stylesheet" type="text/css" title="simplex">
-		<link href="{{ ASSET_PATH }}/css/spacelab-bootstrap.min.css" rel="alternate stylesheet" type="text/css" title="spacelab">
-		<link href="{{ ASSET_PATH }}/css/superblue-bootstrap.min.css" rel="alternate stylesheet" type="text/css" title="superblue">
-		<link href="{{ ASSET_PATH }}/css/yeti-bootstrap.min.css" rel="alternate stylesheet" type="text/css" title="yeti">
-		
-		<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-		
-		<link href="{{ ASSET_PATH }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <!-- Le styles -->
+    <link href="{{ ASSET_PATH }}/css/bootstrap.min.css" rel="stylesheet">
 
-	<!-- Le fav and touch icons -->
-	<!-- Update these with your own images
-		<link rel="shortcut icon" href="images/favicon.ico">
-		<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-		<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-		<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
-	-->
+	<link href="{{ ASSET_PATH }}/css/responsive-video.css" rel="stylesheet" type="text/css">
+	<link href="{{ ASSET_PATH }}/css/flower.css" rel="stylesheet" type="text/css">
+	<link href="{{ ASSET_PATH }}/css/colorbox.css" rel="stylesheet" type="text/css">
+	
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="{{ ASSET_PATH}}/js/html5shiv.js"></script>
+    <![endif]-->
 
-		<!-- atom & rss feed -->
-		<link href="{{ BASE_PATH }}{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
-		<link href="{{ BASE_PATH }}{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="{{ BASE_PATH }}/assets/imgs/favicon.ico">
+    <link rel="apple-touch-icon" href="{{ BASE_PATH }}/assets/imgs/apple-touch-icon.png">
+    <!--<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">-->
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ BASE_PATH }}/assets/imgs/apple-touch-icon.png">
 
-	</head>
+    <!-- atom & rss feed -->
+    <link href="{{ BASE_PATH }}{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="{{ BASE_PATH }}{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
 
-	<body>
-	  	<nav class="navbar navbar-default" role="navigation">
-	  		<div class="container">
-			  	<!-- Brand and toggle get grouped for better mobile display -->
-			    <div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="{{ HOME_PATH }}">{{ site.title }}</a>
-	    		</div>
-	    		<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<ul class="nav navbar-nav">
-					     {% assign pages_list = site.pages %}
-					     {% assign group = 'navigation' %}
-					     {% include misc/navigation_list %}
+  </head>
+  <body data-spy="scroll" data-target=".bs-docs-sidebar">
+	 <a href="https://github.com/flower-platform/main"><img src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub" class="fork_github"/></a>
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+
+				<a class="brand" href="{{ HOME_PATH }}"></a>
+				<div class="nav-collapse collapse">
+					<ul class="nav">
+						{% assign pages_list = site.pages %}
+						{% assign current_page = page %}
+						{% include misc/navigation %}
 					</ul>
 				</div>
-	  		</div>
-  		</nav>
-
-	    <div class="container">
-			<div class="content">
-			  {{ content }}
 			</div>
-			<hr>
-			<footer class="text-center">
-				<p class="text-muted"><i>A <a href="http://flower-platform.org">Flower Platform</a> initiative</i></p>
-				<p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}
-				  with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
-				  and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
-				</p>
-			</footer>
-	    </div>
+		</div>
+	</div>
 
-	    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	    <!-- Include all compiled plugins (below), or include individual files as needed -->
-	    <script src="{{ ASSET_PATH }}/js/bootstrap.min.js"></script>
-	    {% include JB/analytics %}
-	</body>
-</html>
+    <div class="container">
+		{% assign current_page = page %}
+		{% assign bread_crumbs_class = 'breadcrumb' %}
+		{% include misc/bread_crumbs %}
+      <div class="content">
+        {{ content }}
+      </div>
+    </div>
+
+	<footer class="footer" >
+		<div class="container">
+			<p>Find us on <a href="https://github.com/flower-platform/main" target="_blank">GitHub</a> | 
+			Follow us on <a href="http://www.twitter.com/flower_platform">Twitter</a> </p>
+			<p>Page built with <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+			and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>. Hosted on <a href="http://pages.github.com">GitHub Pages</a>.
+			</p>
+			&copy; {{ site.time | date: '%Y' }} <a href="http://www.crispico.com">Crispico</a>
+			</p>
+		</div>
+	</footer>
+ 
+	
+    <script src="{{ ASSET_PATH }}/js/jquery.js"></script>
+	<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ></script> -->
+    <script src="{{ ASSET_PATH }}/js/bootstrap.min.js"></script>
+	<script src="{{ ASSET_PATH }}/js/application.js"></script>
+	{% if page.url == '/index.html' %}
+	<script type="text/javascript">
+		$('#flowerModal').on('show', function () {
+			$('div.modal-body').html('<iframe width="853" height="480" src="//www.youtube.com/embed/IGKs9wTiHoU" frameborder="0" allowfullscreen="0"></iframe>'); 
+		});
+		$('#flowerModal').on('hide', function () {
+			$('div.modal-body').html('&nbsp;');  
+		});
+	</script>
+	<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	{% endif %}
+	
+	<script type="text/javascript" src="{{ ASSET_PATH }}/js/jquery.colorbox-min.js"></script>
+	{% assign screenshots_page = false %}
+	{% if page.url contains "screenshot" %}
+		{% assign screenshots_page = true %}
+	{% endif %}
+	<script type="text/javascript">
+		$("a.{% if screenshots_page == true %}thumbnail{% else %}gallery{% endif %}").colorbox({
+			rel:'{% if screenshots_page == true %}thumbnail{% else %}gallery{% endif %}', 
+			scalePhotos:'false', 
+			scrolling:'true',
+			reposition:'true',
+			title: function() {
+				{% if screenshots_page == true %}
+				return "<a href=\"" + $(this).attr('href') + "\"><strong>" + $(this).next("h3").text() + "</strong></a><br/>" + $(this).attr('title');
+				{% else %}
+				return "<a href=\"" + $(this).attr('href') + "\">" + $(this).attr("title") + "</a>";
+				{% endif %}
+			},
+			maxWidth: function() {return $(window).width(); },
+			maxHeight: function() {return $(window).height(); },
+			onComplete: function() {
+				$(".cboxPhoto").attr("title", "Click to go to the next picture");
+			}
+		});
+	</script>
+	
+    {% include JB/analytics %}
+  </body>
+</html> 
