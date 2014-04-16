@@ -422,7 +422,7 @@ div.post-head {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   body > .navbar .navbar-brand {
 	height: 49px;
 	width: 185px;

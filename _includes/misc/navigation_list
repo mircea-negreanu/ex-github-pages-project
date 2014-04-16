@@ -57,7 +57,7 @@ Usage:
 
 {% assign dropdown_started = false %}
 {% for node_order in site.custom_settings.navigation_order %}
-	{% assign title = nil %}{% assign active = false %}{% assign node_url = nil %}{% assign icon = nil %}
+	{% assign title = nil %}{% assign active = false %}{% assign node_url = nil %}{% assign icon = nil %}{% assign hidden_sm = false %}
 	{% if node_order.page == 'start_dropdown' %}
 		{% assign dropdown_started = true %}
 	<li class="dropdown">
@@ -73,6 +73,7 @@ Usage:
 		{% assign node_url = node_order.link %}
 		{% assign title = node_order.title %}
 		{% if node_order.icon != nil %}{% assign icon = node_order.icon %}{% endif %}
+		{% if node_order.hidden_sm == true %}{% assign hidden_sm = true %}{% endif %}
 	{% else %}
 		{% for node in navigation_file_arr %}
 			{% if node == node_order.page or (node_order.page == 'home' and navigation_href_arr[forloop.index0] == '/index.html') %}
@@ -87,12 +88,13 @@ Usage:
 					{% endif %}
 				{% endunless %}{% endif %}
 				{% if node_order.icon != nil %}{% assign icon = node_order.icon %}{% endif %}
+				{% if node_order.hidden_sm == true %}{% assign hidden_sm = true %}{% endif %}
 				{% break %}
 			{% endif %}
 		{% endfor %}
 	{% endif %}
 	{% if title %}
-	<li{% if active == true %} class="active"{% endif %}><a href="{{ BASE_PATH }}{{node_url}}"{%if active == true %} class="active" {% endif %}>{% if icon contains "glyphicon-" %}<span class="glyphicon {{ icon }}"></span>{% elsif icon contains "fa-" %}<i class="fa {{ icon }} fa-lg"></i>{% endif %} {{title}}</a></li>
+	<li{% if active == true %} class="active"{% endif %}><a href="{{ BASE_PATH }}{{node_url}}"{%if active == true %} class="active" {% endif %} title="{{ title }}">{% if icon contains "glyphicon-" %}<span class="glyphicon {{ icon }}"></span>{% elsif icon contains "fa-" %}<i class="fa {{ icon }} fa-lg"></i>{% endif %}{% if hidden_sm == true %}<span class="hidden-sm">{% endif %} {{title}} {% if hidden_sm == true %}</span>{% endif %}</a></li>
 	{% endif %}
 {% endfor %}
 {% if dropdown_started == true %}

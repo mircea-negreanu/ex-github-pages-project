@@ -46,11 +46,14 @@ custom_settings:
   #			generated with a index.html inside - the name of the folder)
   #		icon - the icon (recognizable are only glyphicon- and fa-)
   #		title - the title for menu (for custom_pages or start_dropdown)
-  #		link - url to go to for custom_page			
+  #		link - url to go to for custom_page
+  #		hidden_sm - when the ecran becomes smaller, in order not to 
+  #		 wrap on multiple pages, only the icon will be shown			
   navigation_order:
     -
       page: home
       icon: glyphicon-home
+      hidden_sm: true
     -
       page: concepts
     -
@@ -66,14 +69,17 @@ custom_settings:
       title: Tutorials & Doc
       link: //doc-flower-platform-v1.flower-platform.org/flower_dev_center/tutorials/first_steps_with_flower_dev_center
       icon: glyphicon-book
+      hidden_sm: true
     -
       page: blog
       icon: glyphicon-tasks
+      hidden_sm: true
     -
       page: custom_page
       title: Forum
       link: //www.flower-platform.com/forum/
       icon: glyphicon-comment
+      hidden_sm: true
   # 
   # What link to be active when we are on a blog
   # blog_name - the page to be active
