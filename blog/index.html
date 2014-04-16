@@ -7,7 +7,7 @@ description: ""
 {% include JB/setup %}
 
 <div class="row">
-	<div class="col-sm-8">
+	<div class="col-sm-9">
 		{% for post in paginator.posts %}
 			<h2><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h2>
 			<p class="author muted"> Posted on <span class="date">{{ post.date | date: "%B %e, %Y" }}</span>
@@ -61,7 +61,7 @@ description: ""
 		{% endif %}
 		
 	</div>
-	<div class="col-sm-4">
+	<div class="col-sm-3">
 		{% assign sidebar_categories = site.categories %}
 		{% assign sidebar_show_categories = true %}
 		{% assign sidebar_posts_no = 5 %}
