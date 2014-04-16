@@ -308,7 +308,12 @@ hr.concepts-labels {
 }
 
 .tag_cloud_box {
-	margin-left: 0px;
+	margin: 0px;
+	padding: 0px;
+}
+
+.tag_cloud_box li {
+	line-height: 20px;
 }
 
 .tag_cloud_box li{
