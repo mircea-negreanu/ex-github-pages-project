@@ -121,11 +121,6 @@ section > ul li {
   margin-bottom: 5px;
 }
 
-/* Separators (hr) */
-.bs-docs-separator {
-  margin: 40px 0 39px;
-}
-
 /* Faded out hr */
 hr.soften {
   height: 1px;
@@ -178,22 +173,6 @@ hr.concepts-labels {
   *display: inline;
   *zoom: 1;
 }
-
-/* Subhead (other pages) */
-.subhead {
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-}
-.subhead h1 {
-  font-size: 60px;
-}
-.subhead p {
-  margin-bottom: 20px;
-}
-.subhead .navbar {
-  display: none;
-}
-
 
 /* Footer */
 
@@ -303,18 +282,6 @@ hr.concepts-labels {
 	font-weight: bold; 
 }
 
-.tag_box a span {
-	vertical-align: super;
-	font-size: 0.8em; 
-	background: #eee;
-	border-radius: 5px;
-	text-decoration: none;
-	border: 1px solid #cccccc; 
-	padding: 1px 2px 1px 2px;
-	color: black;
-	
-}
-
 .tag_cloud_box {
 	margin: 0px;
 	padding: 0px;
@@ -322,22 +289,11 @@ hr.concepts-labels {
 
 .tag_cloud_box li {
 	line-height: 20px;
-}
-
-.tag_cloud_box li{
 	display: inline;
 }
 
 .author .date {
 	font-weight: bold;
-}
-
-body .fb-like {
-	display: inline;	
-}
-
-#fb-root {
-	display: inline;
 }
 
 div.post-share {
@@ -413,12 +369,6 @@ div.post-head {
     padding-right: 10px;
   }
 
-  /* Inline-block quick links for more spacing */
-  .quick-links li {
-    display: inline-block;
-    margin: 5px;
-  }
-
   /* When affixed, space properly */
   .bs-docs-sidenav {
     top: 0;
@@ -435,40 +385,25 @@ div.post-head {
   }
 }
 
+/* Tablet to desktop
+------------------------- */
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Adjust sidenav width */
+  .bs-docs-sidenav {
+    width: 166px;
+    margin-top: 20px;
+  }
+}
+
+/* Tablet
+------------------------- */
 @media (max-width: 767px) {
   body > .navbar .navbar-brand {
 	height: 49px;
 	width: 185px;
 	background: url(/assets/imgs/logo_flower-platform_long_h32.png) no-repeat center center;
   }
-}
-
-/* Tablet to desktop
-------------------------- */
-@media (min-width: 768px) and (max-width: 979px) {
-  /* Remove any padding from the body */
-  body {
-    padding-top: 0;
-  }
-  /* Adjust sidenav width */
-  .bs-docs-sidenav {
-    width: 166px;
-    margin-top: 20px;
-  }
-  .bs-docs-sidenav.affix {
-    top: 0;
-  }
-
-}
-
-/* Tablet
-------------------------- */
-@media (max-width: 767px) {
-  /* Remove any padding from the body */
-  body {
-    padding-top: 0;
-  }
-
+	
   .bs-docs-social {
     margin: 0 -20px;
   }
@@ -499,11 +434,6 @@ div.post-head {
 /* Landscape phones
 ------------------------- */
 @media (max-width: 480px) {
-  /* Remove padding above jumbotron */
-  body {
-    padding-top: 0;
-  }
-
   /* Change up some type stuff */
   h2 small {
     display: block;
