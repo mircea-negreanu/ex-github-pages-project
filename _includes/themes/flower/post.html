@@ -32,27 +32,11 @@
     </ul>
   </div>
   <div class="col-sm-4">
-	<h4>Tags</h4>
-	<ul class="tag_box">
-		{% assign tags_list = page.tags %}
-		{% include JB/tags_list %}
-	</ul>
-	<hr class="soften post"/>
-	{% comment %}
-	<h4>Related posts</h4>
-	<ul class="tag_box">
-		{% for post in site.related_posts limit:5 %}
-		<li><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
-		{% endfor %}
-	</ul>
-	<hr/>
-	{% endcomment %}
-	<h4>Latest posts</h4>
-	<ul class="tab_box">
-		{% for post in site.posts limit:5 %}
-		<li><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
-		{% endfor %}
-	</ul>
+  	  {% assign sidebar_tags = page.tags %}
+  	  {% assign sidebar_show_tags = true %}
+  	  {% assign sidebar_posts_no = 5 %}
+  	  {% assign sidebar_show_recent_posts = true %}
+  	  {% include misc/sidebar %}	
   </div>
 </div>
     <hr/>
