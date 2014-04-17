@@ -118,10 +118,10 @@
 	<script src="{{ ASSET_PATH }}/js/application.js"></script>
 	{% if page.url == '/index.html' %}
 	<script type="text/javascript">
-		$('#flowerModal').on('show', function () {
+		$('#flowerModal').on('show.bs.modal', function () {
 			$('div.modal-body').html('<iframe width="853" height="480" src="//www.youtube.com/embed/IGKs9wTiHoU" frameborder="0" allowfullscreen="0"></iframe>'); 
 		});
-		$('#flowerModal').on('hide', function () {
+		$('#flowerModal').on('hide.bs.modal', function () {
 			$('div.modal-body').html('&nbsp;');  
 		});
 	</script>
