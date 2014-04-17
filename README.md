@@ -15,3 +15,6 @@ Also, on windows, you will need, besides **ruby**, the **Development Kit** (down
 This site uses **kramdown** as a markdown parser. A description of its syntax (and the way it differs or enhances the standard
 markdown can be found [here](http://kramdown.gettalong.org/syntax.html) )
    
+In order to see the site locally, just go to the folder where you cloned the repository and issue
+
+    jekyll serve --watch
