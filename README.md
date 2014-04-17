@@ -1,6 +1,6 @@
 Flower Platform site page.
 
-=== Contribution guide.
+=== Contribution guide. ===
 
 In order to contribute to this, you will have to install jekyll on your machine, toghether with all the 
 needed plugins that github uses (which versions are always kept up to date [here](https://pages.github.com/versions/) )
