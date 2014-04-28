@@ -21,35 +21,40 @@ For a Win 32/64 environment, here are the steps.
 ruby dk.rb init
 ruby dk.rb install
 ```
+* Install Jekyll cf. the [GitHub Pages doc](https://help.github.com/articles/using-jekyll-with-pages) / Step 2:
+```
+gem install bundler
+```
+* Cf. step 3 of the above doc: a ``Gemfile`` should already exist in the repo root (so you don't need to create it). It should point to the required dependencies/versions, as they are [installed on GitHub Pages](https://pages.github.com/versions/). Run:
+```
+gem install github-pages
+gem install wdm
+```
 
-Contribution guide.
-----
+# Running Jekyll
 
-In order to contribute, you will have to install **jekyll** on your machine, toghether with all the 
-needed plugins that github uses (which versions are always kept up to date [here](https://pages.github.com/versions/) )
+In order to see the site locally, go to the repo root and type:
 
-You will need, **ruby**, and - on windows - the **Development Kit** (download them [here](http://rubyinstaller.org/downloads/) )
+```
+jekyll serve --watch
+```
 
-The [recommended](https://help.github.com/articles/using-jekyll-with-pages) installing procedure for jekyll for github pages 
-is to use bundler or the github-pages gem. Unfortunatelly for windows on 64 bits, the nokogiri gem (used by jemoji plugin), is not 
-available/compilable, so, for these platforms we will need to install the rest of the gems by hand (just do 
+The site should now be available at [http://localhost:4000](http://localhost:4000).
 
-    gem install name_gem_here -v version_from_github
-    
-)
+A couple of userful commands (although creation by copy/paste is also possible). To add a new post 
 
-This site uses **kramdown** as a markdown parser. A description of its syntax (and the way it differs or enhances the standard
-markdown) can be found [here](http://kramdown.gettalong.org/syntax.html)
-   
-In order to see the site locally, just go to the folder where you cloned the repository and issue
-
-    jekyll serve --watch
-    
-    
-After, to add a new post 
-
-    rake post title="Title of post" tags=[tag1, tag2]
+```
+rake post title="Title of post" tags=[tag1, tag2]
+```
     
 To add a new page:
 	
-	rake page name="page_name.md"
+```
+rake page name="page_name.md"
+```
+
+# Markdown Syntax
+
+I recommend the following links:
+* https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+* https://daringfireball.net/projects/markdown/ - The official guide, although I find it less readable than the above.
