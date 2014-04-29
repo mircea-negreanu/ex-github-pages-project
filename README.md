@@ -58,3 +58,6 @@ rake page name="page_name.md"
 I recommend the following links:
 * https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 * https://daringfireball.net/projects/markdown/ - The official guide, although I find it less readable than the above.
+
+This site uses **kramdown** as a markdown parser. A description of its syntax (and the way it differs and enhances the standard
+markdown) can be found at http://kramdown.gettalong.org/syntax.html
