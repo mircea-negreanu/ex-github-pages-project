@@ -53,10 +53,41 @@ To add a new page:
 rake page name="page_name.md"
 ```
 
-# Markdown Syntax
+# Hints on Editing (Markdown Syntax, Bootstrap, Etc.)
 
 I recommend the following links:
 * https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 * https://daringfireball.net/projects/markdown/ - The official guide, although I find it less readable than the above.
 * http://kramdown.gettalong.org/syntax.html - The description of the syntax (differences and enhancements from the standard markdown) that is offered by **kramdown** (the markdown parser used by this site).
 * http://getbootstrap.com/ - Reference Doc for the Bootstrap framework 
+
+## Mixing HTML and Markdown
+
+In order to use HTML in a Markdown file, you just put the html code. Cf. this [Kramdown doc](http://kramdown.gettalong.org/syntax.html#html-blocks), only "block level" elements behave like this (e.g. ``<div>``, ``<p>``, etc.). Other elements (i.e. "span level"; e.g. ``<button>``, ``<a>``, etc.) don't work out of the box. They should be surrounded with block level tags.
+
+If you have Markdown text inside HTML blocks, you should add ``markdown="1"`` and you should close the block (e.g. ``<div>``) on a new line.
+
+```html
+<h1>My HTML <b>heading</b></h1>
+
+<!-- Not OK -->
+<button ...>...</button>
+
+<!-- OK -->
+<div><button ...>...</button></div>
+
+<!-- Markdown content not rendered -->
+<div class="...">
+Hello **world**.
+</div>
+
+<!-- Markdown content rendered -->
+<div markdown="1" class="...">
+Hello **world**.
+</div>
+
+<!-- Not OK, because <div> ends on same line -->
+<div markdown="1" class="...">Hello **world**.</div>
+```
+
+
