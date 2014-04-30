@@ -53,10 +53,18 @@ To add a new page:
 rake page name="page_name.md"
 ```
 
-# Markdown Syntax
+# Hints on Editing (Markdown Syntax, Bootstrap, Etc.)
 
 I recommend the following links:
 * https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 * https://daringfireball.net/projects/markdown/ - The official guide, although I find it less readable than the above.
 * http://kramdown.gettalong.org/syntax.html - The description of the syntax (differences and enhancements from the standard markdown) that is offered by **kramdown** (the markdown parser used by this site).
 * http://getbootstrap.com/ - Reference Doc for the Bootstrap framework 
+
+## Mixing HTML and Markdown
+
+In order to use HTML in a Markdown file, you just put the html code. E.g.
+
+```
+<h1>My HTML <b>heading</b></h1>
+```
