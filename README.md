@@ -63,8 +63,31 @@ I recommend the following links:
 
 ## Mixing HTML and Markdown
 
-In order to use HTML in a Markdown file, you just put the html code. E.g.
+In order to use HTML in a Markdown file, you just put the html code. Cf. this [Kramdown doc](http://kramdown.gettalong.org/syntax.html#html-blocks), only "block level" elements behave like this (e.g. ``<div>``, ``<p>``, etc.). Other elements (i.e. "span level"; e.g. ``<button>``, ``<a>``, etc.) don't work out of the box. They should be surrounded with block level tags.
+
+If you have Markdown text inside HTML blocks, you should add ``markdown="1"`` and you should close the block (e.g. ``<div>`` on a new line.
 
 ```html
 <h1>My HTML <b>heading</b></h1>
+
+<!-- Not OK -->
+<button ...>...</button>
+
+<!-- OK -->
+<div><button ...>...</button></div>
+
+<!-- Markdown content not rendered -->
+<div class="...">
+Hello **world**.
+</div>
+
+<!-- Markdown content rendered -->
+<div markdown="1" class="...">
+Hello **world**.
+</div>
+
+<!-- Not OK, because <div> ends on same line -->
+<div markdown="1" class="...">Hello **world**.</div>
 ```
+
+
