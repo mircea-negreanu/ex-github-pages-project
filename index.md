@@ -72,13 +72,13 @@ more ...
 
 ### Flower Platform Core
 
-**Flower Platform Core** is a modular platform that makes it easy for extensions to connect to external data sources, represent data visually and to synchronize the data.
+**Flower Platform Core** is a modular platform that makes it easy for extensions to connect to external data sources, to represent data visually and to synchronize the data. It contains:
 
-**Flower Platform Server** is a server application with a web front-end (i.e. a web app). Sharing and collaboration around mind maps and diagrams are a primary focus. The server side code is written in Java and it's modular, packed as OSGi plugins. The client side code (using Apache Flex and JavaScript) is also modular.
+**Flower Platform Server**: a server application with a web front-end (i.e. a web app). Sharing and collaboration around mind maps and diagrams are a primary focus. The server side code is written in Java and it's modular, packed as [OSGi plugins](http://www.osgi.org) (in an [Eclipse Equinox](http://www.eclipse.org/equinox/) container). The client side code (using [Apache Flex](http://flex.apache.org/) and JavaScript) is also modular.
 
-**Flower Platform Mobile** is a mobile client (Android, iOS), that makes it easy for extensions to expose most of their features on mobile,  using **single sourcing** (i.e. same client code runs in the web and mobile environment).
+**Flower Platform Mobile**: a mobile client (Android, iOS), that makes it easy for extensions to expose most of their features on mobile,  using **single sourcing** (i.e. same client code runs in the web and mobile environment).
 
-**Flower Platform for IDE** is designed to integrate into IDEs, using an embedded servlet container (Jetty), and an embedded browser. Eclipse is supported natively (being an OSGi container). IDEA is supported as well, using a small Equinox based host wrapper. The same principle can be used to easily support other IDEs in the future. Same **single sourcing** concept applies here as well (i.e. same server and client code runs both in a web deployment or in a IDE/local deployment).
+**Flower Platform for IDE**: designed to integrate into IDEs, using an embedded servlet container ([Jetty](http://www.eclipse.org/jetty/)), and an embedded browser. Eclipse is supported natively (being an OSGi container). [IntelliJ IDEA](http://www.jetbrains.com/idea/) and other IDEA based IDEs are supported as well, using a small Equinox based host wrapper. The same principle can be used to easily support other IDEs in the future. Same **single sourcing** concept applies here as well (i.e. same server and client code runs both in a web deployment or in a IDE/local deployment).
 
 ### Flower Platform Extensions
 
@@ -90,9 +90,38 @@ An **extension** is a set of OSGi plugins that do the actual work. I.e. they kno
 
 </div>
 
+<h1>History <small>Important historical milestones of Flower Platform</small></h1>
+
+<div><button type="button" class="btn btn-primary btn-xs" data-toggle="collapse" data-target="#history-details">
+more ...
+</button>
+</div>
+
+<div id="history-details" class="collapse" markdown="1">
+
+### Flower Platform v1: UML4AS - UML editor with code synchronization support for ActionScript and Flex
+
+* May 22, 2010: Crispico releases UML4AS, UML for ActionScript & Flex. An Eclipse plugin focused on UML modeling. It features a technology that we call CodeSync, a code <-> model synchronization technology that militates for a modeling language that supports language specificities. The frontend of UML4AS is web based, so the Eclipse editor embeds actually a web browser showing the UI.
+* January 13, 2011: UML4AS 1.2 is released. 
+* August 29, 2011: UML4AS has reached 10k downloads.
+* December 15, 2011: UML4AS + Java is released. Same product with code synchronization support for Java.
+
+### Flower Platform v2: Flower Dev Center - Collaborative diagramming software (web based)
+
+* October 23, 2012: Crispico releases Flower Dev Center. A server product with web UI that features diagramming and code synchronization.
+
+### Flower Platform v3: Smart diagrams that connect to your code & dev tools
+
+* March 11, 2013: Crispico starts working at Flower Platform v3. A rewrite of the existing products, having as goals: mobile support, multiple programming languages & dev tools support. And ultimate performance. Flower Platform becomes open-source.
+
+### Flower Platform v4: Smart mind maps and diagrams for developers
+
+* December 2, 2013: Crispico decides once again to perform a major rewrite, because of 2 main resons:
+  * Scalability. For Flower Platform <= v3, we were managing and persisting data with [Eclipse EMF](https://www.eclipse.org/modeling/emf/). EMF is a great technology, that offers a lot of features. But, from our experience, when we need to scale, and persist data in a data store (SQL or NoSQL), things begin to be complex. And the amount of complexity > the comfort offered by the EMF framework. That's why, we decided to abandon EMF, in favour of an in-house implementation, more light-weight and scalable.
+  * Slight strategy shift. We decided to focus more on representing data as mind maps rather than diagrams. We find that mind maps are somehow between a text editor (rather key oriented) and a diagram (rather mouse oriented) and they offer better productivity for developers.
+</div>
+
 <hr>
 <div class="page-header">
   <h1>Flower Platform Extensions</h1>
 </div>
-
-<div markdown="1">mydiv</div>

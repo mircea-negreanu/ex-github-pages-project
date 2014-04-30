@@ -12,10 +12,10 @@ markdown: kramdown
 # so be sure to set them if your theme uses them.
 #
 title : Flower Platform
-tagline: The Open Source Modeling Platform
+tagline: Smart mind maps and diagrams for developers
 author :
   name : Flower Platform Team
-  email : flower_platform_team@flower_platform.org
+  email : contact@crispico.com
   github : flower-platform
   twitter : flower_platform
   feedburner : 
@@ -56,6 +56,7 @@ custom_settings:
       hidden_sm: true
     -
       page: concepts
+      icon: glyphicon-cog
     -
       page: screenshots
     -
@@ -63,23 +64,10 @@ custom_settings:
     -
       page: download
     -
-      page: roadmap
-    -
-      page: custom_page
-      title: Tutorials & Doc
-      link: //doc-flower-platform-v1.flower-platform.org/flower_dev_center/tutorials/first_steps_with_flower_dev_center
-      icon: glyphicon-book
-      hidden_sm: true
-    -
       page: blog
       icon: glyphicon-tasks
       hidden_sm: true
-    -
-      page: custom_page
-      title: Forum
-      link: //www.flower-platform.com/forum/
-      icon: glyphicon-comment
-      hidden_sm: true
+
   # 
   # What link to be active when we are on a blog
   # blog_name - the page to be active
