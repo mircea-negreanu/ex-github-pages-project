@@ -65,6 +65,6 @@ I recommend the following links:
 
 In order to use HTML in a Markdown file, you just put the html code. E.g.
 
-```
+```html
 <h1>My HTML <b>heading</b></h1>
 ```
