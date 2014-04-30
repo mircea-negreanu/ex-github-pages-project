@@ -16,10 +16,10 @@ share: true
 
 {% include JB/setup %}
 
-We are inspiring our node properties and styles from [freeplane](http://sourceforge.net/projects/freeplane).
-We currently support a subset of these properties and styles. 
+We are inspiring our node properties and styles from [Freeplane](http://freeplane.sourceforge.net).
+We currently support a subset of Freeplane's properties and styles. 
 
-A property can be changed by using our [Properties Editor].
+A property can be changed by using our [Properties Editor](../core/properties_editor.html).
 
 ## Style
 
