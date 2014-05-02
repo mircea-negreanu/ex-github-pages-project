@@ -3,7 +3,7 @@ layout: page-subconcept
 title: "Mind Map"
 #tagline: "..."
 id: mind-map
-order: "overview node_properties_styles manage_styles"
+order: "overview node_core node_properties_styles manage_styles"
 ---
 {% include JB/setup %}
 
