@@ -16,15 +16,13 @@ share: true
 
 {% include JB/setup %}
 
-A node core can be modified in 2 different ways:
-
 ## Edit core in-line
 
 <img class="img-thumbnail center-block pull-right" src="mm_node_core1.png"/>
 
 <div markdown="1" class="clearfix">
 
-Available at **mouse click** or **F2** pressed on already selected node. <br>
+Available at ``mouse click`` or ``F2`` pressed on already selected node. <br>
 Opens an inline editor for fast entering and modifying text.
 </div>
 
@@ -34,7 +32,7 @@ Opens an inline editor for fast entering and modifying text.
 Inline editor hints:
 
 * ``Ctrl + Enter`` -> add new line 
-* ``Enter`` or click outside the inline editor -> submit 
+* ``Enter`` or click outside -> submit 
 * ``Esc`` -> abort
 
 </div>
