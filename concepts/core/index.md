@@ -3,7 +3,7 @@ layout: page-subconcept
 title: "Core Platform and Plugins"
 #tagline: "..."
 id: core
-order: "overview properties_editor file_system"
+order: "overview file_system editor properties_editor"
 ---
 {% include JB/setup %}
 
