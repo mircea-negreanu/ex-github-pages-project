@@ -4,7 +4,7 @@ group: subconcept
 parent-id: mind-map
 
 title: "Mind Map Extension Overview"
-labels: [in-progress]
+labels: [implemented, in-progress]
 #tagline: "tagline"
 comments: true
 share: true

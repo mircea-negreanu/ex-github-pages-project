@@ -4,7 +4,7 @@ group: subconcept
 parent-id: core
 
 title: "Properties Editor"
-#labels: [in-progress]
+labels: [in-progress]
 #tagline: "tagline"
 comments: true
 share: true

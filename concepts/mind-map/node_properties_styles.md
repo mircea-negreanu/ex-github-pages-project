@@ -4,7 +4,7 @@ group: subconcept
 parent-id: mind-map
 
 title: "Node Properties and Styles"
-#labels: [in-progress]
+labels: [implemented, in-progress]
 #tagline: "tagline"
 comments: true
 share: true

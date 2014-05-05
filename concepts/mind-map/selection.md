@@ -4,7 +4,7 @@ group: subconcept
 parent-id: mind-map
 
 title: "Selection"
-#labels: [in-progress]
+labels: [implemented]
 #tagline: "tagline"
 comments: true
 share: true

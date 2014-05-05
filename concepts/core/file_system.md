@@ -4,7 +4,7 @@ group: subconcept
 parent-id: core
 
 title: "File System"
-#labels: [in-progress]
+labels: [implemented, in-progress]
 #tagline: "tagline"
 comments: true
 share: true
