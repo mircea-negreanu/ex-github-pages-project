@@ -16,7 +16,26 @@ share: true
 
 {% include JB/setup %}
 
-## TODO: write about file system
+The directory structure can be seen as child of the **fileSystem** node.
+
+<img class="img-thumbnail center-block" src="fileSystem.png"/>
+
+## New File/Folder
+
+To create new files and folders, use the **New File/Folder** action.
+
+<p class="text-center">
+<img class="img-thumbnail" src="newFileFolder1.png"/>
+<img class="img-thumbnail" src="newFileFolder2.png" hspace="20"/>
+</p>
+
+Insert the desired name, check the **Is directory** checkbox if you want to create a folder, and press **OK**.
+
+## Remove
+
+In order to delete a file/folder, use the **Remove** action.
+
+<img class="img-thumbnail center-block" src="remove.png"/>
 
 ## Download
 
@@ -45,3 +64,12 @@ Only single files are supported.
 To upload multiple files, store them in a ``.zip`` file. Flower Platform will ask you if you want to unzip it.
 
 <img class="img-thumbnail center-block" src="upload3.png"/>
+
+## Properties
+
+To see additional info about the files, use the **Properties** action.
+
+<p class="text-center">
+<img class="img-thumbnail" src="properties1.png"/>
+<img class="img-thumbnail" src="properties2.png" hspace="20"/>
+</p>

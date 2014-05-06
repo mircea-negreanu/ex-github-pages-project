@@ -73,6 +73,16 @@ We provide 2 ways to change a node's icons:
 * **Max node width** (in pixels)
 </div>
 
+## Edges
+
+<img class="img-thumbnail center-block pull-right" src="mm_edges.png"/>
+
+<div markdown="1" class="clearfix">
+* **Edge width** (in pixels)
+* **Edge style**
+* **Edge color**
+</div>
+
 ## Clouds
 
 <img class="img-thumbnail center-block pull-right" src="mm_cloud.png"/>

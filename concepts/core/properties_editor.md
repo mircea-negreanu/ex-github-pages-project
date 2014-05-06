@@ -15,3 +15,17 @@ share: true
 ---
 
 {% include JB/setup %}
+
+The Properties view displays available properties for the selected node. To enable this view, use the **Properties** action.
+
+<p class="text-center">
+<img class="img-thumbnail" src="properties4.png"/>
+<img class="img-thumbnail" src="properties3.png" hspace="20"/>
+</p>
+
+Properties that can be edited have a **Change** checkbox next to them. If the default property value is changed, the checkbox becomes selected. Deselecting the checkbox, will restore the default value for that property.
+
+<img class="img-thumbnail center-block" src="properties5.png"/>
+
+* It is possible to select a different node without leaving the Properties Panel
+
