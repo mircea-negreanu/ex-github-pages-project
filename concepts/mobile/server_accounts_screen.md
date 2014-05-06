@@ -15,19 +15,20 @@ share: true
 ---
 
 {% include JB/setup %}
-Server accounts screen shows the user list of accounts. 
+Server accounts screen is used to manage the list of server accounts. It can be opened by clicking on the **Open Accounts** button.
+
+<img class="img-thumbnail center-block" src="server_accounts.png"/>
 
 ## New Server Account
-To create a new Server account, use the *Add Server Account* action.
+To create a new Server account, use the **Add Server Account** action.
 
-## Select Default Server Account
-To mark a server account as the default one, the checkbox next to it must be selected.
-The next time application starts it will connect with the selected default account.
+<img class="img-thumbnail center-block" src="add_server_account.png"/>
 
 ## Edit Server Account
-To
+To edit a server account, click on the account you want to edit, this will open the [Edit Server Account](edit_server_account.html) screen.
 
-##TODO
-* about server accounts
+## Select Default Server Account
+To mark a server account as the default one, the checkbox, next to it, must be selected.
+The next time application starts it will connect with the selected default account.
 
 
