@@ -20,7 +20,7 @@ share: true
 <img class="img-thumbnail center-block" src="edit_server_account.png"/>
 
 ## Add Server Account
-To add a Server Account fill the form and click on the **Save** button.
+To add a Server Account, fill the form and click on the **Save** button.
 
 <div markdown="1" class="clearfix">
 * **Host** field is mandatory.
