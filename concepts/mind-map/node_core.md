@@ -51,3 +51,46 @@ It provides the ability to see changes in real time, necessary when working with
 <div class="alert alert-info" markdown="1">
 To display html text, enclose it with ``html`` tag.
 </div>
+
+## Edit node details in dialog
+
+Available as action in selected node's menu.
+<img class="img-thumbnail center-block" src="mm_node_details1.png"/>
+
+
+It provides the ability to add **Node details**.<br>
+<img class="img-thumbnail center-block" src="mm_node_details2.png"/>
+
+<div class="alert alert-info" markdown="1">
+To display html text, enclose it with ``html`` tag.
+</div>
+
+**Node details** can be expanded or collapsed by clicking on the **Note Details Icon**.
+
+<p class="text-center">
+<img class="img-thumbnail" src="mm_node_details_icon1.png"/>
+<img class="img-thumbnail" src="mm_node_details_icon2.png" hspace="20"/>
+</p>
+
+<div markdown="1" class="clearfix">
+
+## Edit note in dialog
+
+Available as action in selected node's menu.
+<img class="img-thumbnail center-block" src="mm_node_note1.png"/>
+
+
+It provides the ability to add **Node notes**.
+<img class="img-thumbnail center-block" src="mm_node_note.png"/>
+
+<div class="alert alert-info" markdown="1">
+To display html text, enclose it with ``html`` tag.
+</div>
+
+Nodes that have notes are preceded with a **note icon**.
+**Node note** is visible when the mouse pointer is moved over the node.
+
+<p class="text-center">
+<img class="img-thumbnail" src="mm_node_note2.png"/>
+<img class="img-thumbnail" src="mm_node_note3.png" hspace="20"/>
+</p>
