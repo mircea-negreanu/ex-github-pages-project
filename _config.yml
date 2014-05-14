@@ -67,7 +67,9 @@ custom_settings:
       page: blog
       icon: glyphicon-tasks
       hidden_sm: true
-
+    -
+      page: flow
+    
   # 
   # What link to be active when we are on a blog
   # blog_name - the page to be active
