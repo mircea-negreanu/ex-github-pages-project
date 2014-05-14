@@ -69,10 +69,12 @@ custom_settings:
       hidden_sm: true
     -
       page: custom_page
-      link: myLink
+      link: hub.flower-platform.com
       title: Flower Platform Hub
       icon: fa-cloud
-
+    -
+      page: flow
+    
   # 
   # What link to be active when we are on a blog
   # blog_name - the page to be active
