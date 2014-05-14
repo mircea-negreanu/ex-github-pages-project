@@ -1,7 +1,7 @@
 /* Body/Structure */
 body {
   position: relative;
-  padding-top: 60px;
+  padding-top: 40px;
 }
 
 /* Code in headings */
@@ -105,6 +105,10 @@ ul.homepage li
 /* breadcrumb */
 .breadcrumb-no-separator > li + li:before {
 	content: "";
+}
+
+.breadcrumb {
+	margin-top: 20px;
 }
 
 /* Sections */

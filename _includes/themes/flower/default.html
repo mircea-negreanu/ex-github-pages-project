@@ -89,7 +89,10 @@
 			</div>
 		</div>
 	</nav>
-
+	
+	{% if page.hero %}
+		{{ content }}
+	{% else %}
     <div class="container">
 		{% assign current_page = page %}
 		{% assign bread_crumbs_class = 'breadcrumb' %}
@@ -98,7 +101,8 @@
         {{ content }}
       </div>
     </div>
-
+	{% endif %}
+	
 	<footer class="footer" >
 		<div class="container">
 			<p>Find us on <a href="https://github.com/flower-platform/flower-platform-4" target="_blank">GitHub</a> | 

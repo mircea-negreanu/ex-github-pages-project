@@ -1,6 +1,6 @@
 ---
 layout: page-subconcept
-title: "Core Platform and Plugins"
+title: "Core - Web App"
 #tagline: "..."
 id: core
 order: "overview file_system editor properties_editor links"

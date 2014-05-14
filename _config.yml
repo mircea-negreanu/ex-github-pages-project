@@ -52,21 +52,26 @@ custom_settings:
   navigation_order:
     -
       page: home
-      icon: glyphicon-home
+      icon: fa-home
       hidden_sm: true
     -
       page: concepts
-      icon: glyphicon-cog
+      icon: fa-cogs
     -
       page: screenshots
-    -
-      page: demo
+      icon: fa-camera
     -
       page: download
+      icon: fa-download
     -
       page: blog
-      icon: glyphicon-tasks
+      icon: fa-pencil-square-o
       hidden_sm: true
+    -
+      page: custom_page
+      link: myLink
+      title: Flower Platform Hub
+      icon: fa-cloud
 
   # 
   # What link to be active when we are on a blog

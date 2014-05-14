@@ -1,5 +1,7 @@
 ---
 layout: page
+# hero means that this content will be inserted directly in the page; i.e. not inside a "container", that adds some margins;
+# it was meant for the index page, where the gray zone spans on all the screen
 hero: true
 title: Home
 show_title: false
@@ -15,12 +17,16 @@ show_title: false
   </div>
 </div>
 
+<div class="container">
+<div class="content" markdown="1">
+<div class="row">
+<div class="col-md-6" markdown="1">
 <h1>What? <small>What is Flower Platform?</small></h1>
 
-Flower Platform is about representing data as **smart mind maps** and **diagrams**. We say that mind maps and diagrams are smart when:
+Flower Platform is an **open source** (GPL v3) software platform designed to help developers to represent data as **smart mind maps** and **diagrams**. We say that mind maps and diagrams are smart when:
 
-<div><button type="button" class="btn btn-primary btn-xs" data-toggle="collapse" data-target="#what-details">
-more ...
+<div><button type="button" class="btn btn-primary btn-s" data-toggle="collapse" data-target="#what-details">
+More <span class="glyphicon glyphicon-chevron-down"></span>
 </button></div>
 
 <div id="what-details" class="collapse" markdown="1">
@@ -28,25 +34,24 @@ more ...
 1. they allow us (developers) to **interact visually** with the data. And when done, the modifications are synchronized with the original data sources (i.e. 2 way data synchronization);
 1. they allow simultaneous **collaboration** between us. **Ubiquity**: access and collaborate on mind maps and diagrams from the web, IDE, mobile.
 
-Flower Platform is **several things**:
+Flower Platform has several **components**:
 
 * *Flower Platform Core*
-  * *Flower Platform Server*: a server application (with a web front-end); it hosts extensions (plugins)
+  * *Flower Platform Web App*: a server application (with a web front-end); it hosts extensions (plugins)
   * *Flower Platform Mobile*: a mobile client for the Flower Platform Server
   * *Flower Platform for IDE*: hosts extensions (plugins) inside popular IDEs
 * *Flower Platform Extensions*: plugins that do the actual work
 * *Flower Platform Hub*: an online free service: cloud hosted Flower Platform Server and extensions
 
-Flower Platform is **open source**, under GPL v3 license.
-
 </div>
-
-<h1>Why? <small>Why are we developing Flower Platform? Why do we think it's important?</small></h1>
+</div>
+<div class="col-md-6" markdown="1">
+<h1>Why? <small>Why do we think it's important?<br>Why are we developing Flower Platform?</small></h1>
 
 Because of **best practices**:
 
-<div><button type="button" class="btn btn-primary btn-xs" data-toggle="collapse" data-target="#why-details">
-more ...
+<div><button type="button" class="btn btn-primary btn-s" data-toggle="collapse" data-target="#why-details">
+More <span class="glyphicon glyphicon-chevron-down"></span>
 </button></div>
 
 <div id="why-details" class="collapse" markdown="1">
@@ -58,42 +63,91 @@ The state of the art in our field of work (i.e. the number and quality of progra
 * automatize our work with libs, frameworks, etc. (i.e. the **runtime** area), and
 * interconnect some dev tools that we are using (i.e. the **work flow** area).
 </div>
-
-<h1>How? <small>Technical overview of Flower Platform</small></h1>
-
-The Flower Platform software ecosystem is composed of:
-
-<div><button type="button" class="btn btn-primary btn-xs" data-toggle="collapse" data-target="#how-details">
-more ...
-</button>
+</div>
 </div>
 
-<div id="how-details" class="collapse" markdown="1">
-
-### Flower Platform Core
-
+# How? <small>Overview of Flower Platform components</small>
+<hr>
+# Flower Platform Core
+<hr>
 **Flower Platform Core** is a modular platform that makes it easy for extensions to connect to external data sources, to represent data visually and to synchronize the data. It contains:
 
-**Flower Platform Server**: a server application with a web front-end (i.e. a web app). Sharing and collaboration around mind maps and diagrams are a primary focus. The server side code is written in Java and it's modular, packed as [OSGi plugins](http://www.osgi.org) (in an [Eclipse Equinox](http://www.eclipse.org/equinox/) container). The client side code (using [Apache Flex](http://flex.apache.org/) and JavaScript) is also modular.
+<div class="row">
+<div class="col-md-4" markdown="1">
+## Flower Platform Web App
 
-**Flower Platform Mobile**: a mobile client (Android, iOS), that makes it easy for extensions to expose most of their features on mobile,  using **single sourcing** (i.e. same client code runs in the web and mobile environment).
+Sharing and collaboration around mind maps and diagrams are a primary focus. 
 
-**Flower Platform for IDE**: designed to integrate into IDEs, using an embedded servlet container ([Jetty](http://www.eclipse.org/jetty/)), and an embedded browser. Eclipse is supported natively (being an OSGi container). [IntelliJ IDEA](http://www.jetbrains.com/idea/) and other IDEA based IDEs are supported as well, using a small Equinox based host wrapper. The same principle can be used to easily support other IDEs in the future. Same **single sourcing** concept applies here as well (i.e. same server and client code runs both in a web deployment or in a IDE/local deployment).
+The server side code is written in Java and it's modular, packed as [OSGi plugins](http://www.osgi.org) (in an [Eclipse Equinox](http://www.eclipse.org/equinox/) container). 
 
-### Flower Platform Extensions
+The client side code (using [Apache Flex](http://flex.apache.org/) and JavaScript) is also modular.
 
-An **extension** is a set of OSGi plugins that do the actual work. I.e. they know how to connect to external data sources, they know how to represent it visually, and they know how to synchronize it. Of course, extensions leverage the convenient API exposed by Flower Platform Core (e.g. diagramming library, data synchronization algorithms, etc.). This way, with **single sourcing**, the same plugin code runs in the web app, the IDE and mobile/tablet.
+<p><a class="btn btn-default" href="concepts/core" role="button">More &raquo;</a></p>
+</div>
 
-### Flower Platform Hub
+<div class="col-md-4" markdown="1">
+## Flower Platform Mobile 
 
-**Flower Platform Hub** is an online free service: the Flower Platform ecosystem, in a cloud based environment. Users have the access to all the features of the Flower Platform & extensions, without having to install and maintain a Flower Platform server. Flower Platform Hub is meant to be used by open source communities.
+A mobile client for Android and iOS.
+
+The platform makes it easy for extensions to expose most of their features on mobile,  using **single sourcing** (i.e. same client code runs in the web and mobile environment). 
+
+The client side code (using [Apache Flex](http://flex.apache.org/) and JavaScript) runs on mobile using the [Adobe AIR](http://www.adobe.com/products/air.html) technology.
+
+<p><a class="btn btn-default" href="concepts/mobile" role="button">More &raquo;</a></p>
+</div>
+
+<div class="col-md-4" markdown="1">
+## Flower Platform for IDE
+
+Designed to integrate into IDEs, using an embedded servlet container ([Jetty](http://www.eclipse.org/jetty/)), and an embedded browser. 
+
+[Eclipse](http://www.eclipse.org) is supported natively (being an OSGi container). 
+
+[IntelliJ IDEA](http://www.jetbrains.com/idea/) and other IDEA based IDEs are supported as well, using a small Equinox based host wrapper. The same principle can be used to easily support other IDEs in the future. 
+
+Same **single sourcing** concept applies here as well (i.e. same server and client code runs both in a web deployment or in a IDE/local deployment).
+</div>
 
 </div>
 
-<h1>History <small>Important historical milestones of Flower Platform</small></h1>
+# Flower Platform Extensions
+<hr>
+An **extension** is a set of OSGi plugins that do the actual work. I.e. they know how to connect to external data sources, they know how to represent it visually, and they know how to synchronize it. Of course, extensions leverage the convenient API exposed by Flower Platform Core (e.g. diagramming library, data synchronization algorithms, etc.). This way, with **single sourcing**, the same plugin code runs in the web app, the IDE and mobile/tablet.
 
-<div><button type="button" class="btn btn-primary btn-xs" data-toggle="collapse" data-target="#history-details">
-more ...
+<div class="row">
+<div class="col-md-4" markdown="1">
+## Mind Map
+
+<a href="concepts/mind-map/overview_big.png">
+<img class="img-thumbnail center-block" src="concepts/mind-map/overview_small.png"/>
+</a>
+
+Display generic data as mind map nodes
+
+Collaborate in real time on [Freeplane](http://freeplane.sourceforge.net/) (or [FreeMind](http://freemind.sourceforge.net)) mind maps: on the web & mobile 
+
+<p><a class="btn btn-default" href="concepts/mind-map" role="button">More &raquo;</a></p>
+</div>
+<div class="col-md-4" markdown="1">
+## More Extensions
+
+<img class="img-thumbnail center-block" src="puzzle.png"/>
+
+Several extensions are under active development. 
+
+They should be released in a couple of month. They are interesting and really add value to developers!
+</div>
+</div>
+
+# Flower Platform Hub
+<hr>
+**Flower Platform Hub** is an online free service: the Flower Platform ecosystem, in a cloud based environment. Users have the access to all the features of the Flower Platform & extensions, without having to install and maintain a Flower Platform server. Flower Platform Hub is meant to be used by open source communities.
+
+<h1>History <small>Important historical milestones of Flower Platform</small></h1>
+<hr>
+<div><button type="button" class="btn btn-primary btn-s" data-toggle="collapse" data-target="#history-details">
+More <span class="glyphicon glyphicon-chevron-down"></span>
 </button>
 </div>
 
@@ -121,7 +175,5 @@ more ...
   * Slight strategy shift. We decided to focus more on representing data as mind maps rather than diagrams. We find that mind maps are somehow between a text editor (rather key oriented) and a diagram (rather mouse oriented) and they offer better productivity for developers.
 </div>
 
-<hr>
-<div class="page-header">
-  <h1>Flower Platform Extensions</h1>
-</div>
+</div><!-- .content -->
+</div><!-- .container -->

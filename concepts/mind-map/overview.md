@@ -25,7 +25,7 @@ Flower Platform stores all the data in a tree. The Mind Map Extension displays t
 
 The Mind Map Extension has 2 main responsibilities:
 
-### 1) Display data as nodes in a mind map
+### 1) Display generic data as mind map nodes
 
 And nothing more. I.e. other extensions will add functionality for aspects like: 
 
