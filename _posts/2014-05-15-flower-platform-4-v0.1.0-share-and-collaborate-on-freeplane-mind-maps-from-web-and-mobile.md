@@ -12,6 +12,8 @@ After many months of hard work, the Flower Platform team is very proud to announ
 
 <span class="label label-primary">Guide!</span> We have prepared a small guide that would help you make a quick tour of Flower Platform. More precisely:
 
+Don't hesitate to leave us a comment to tell us what you think about Flower Platform 4!
+
 From the web browser:
 
 * manage files
@@ -56,17 +58,20 @@ The first thing you'll notice should be the ``root`` editor that is already open
 <span class="label label-success">Tip:</span> To see what's available for the mind map editor, visit [the mind map section](/extensions/mind-map). We are working on supporting more and more features from Freeplane. Working with editors in general is detailed in [the editor section](/extensions/core/#Editor).
 </div>
 
-### Share your mind maps
+### Share and collaborate on your mind maps
 
-You can easily share your work with others; any modification you make on your mind map will be automatically propagated to any other user who has the file open in an editor.
+You can easily **share and collaborate** on your mind maps with others. any modification you make on your mind map will be automatically propagated to any other user who has the file open in an editor.
 
-To invite others to a collaborative work session on one (or more!) of your mind maps, go to the **Navigate > Get/Follow Link** action in the global menu. We provide a link to the currently active editor, as well as to all the editors you have open.
+<span class="badge">1</span> To **invite others to a collaborative** work session on one (or more!) of your mind maps, go to the **Navigate > Get/Follow Link** action in the global menu. We provide a link to the currently active editor, as well as to all the editors that are open.
 
 <img class="img-thumbnail center-block" src="/blog-img/2014-05-15/flow-link.png"/>
 
-The link may be pasted in the browser's address bar. In this case the editor(s) will be opened as soon as the application is loaded. If you already have the FP Hub open in your browser, you can also paste the link the **Follow** text input in the **Get/Follow Link** dialog to open the editors in the same application.
+<span class="badge">2</span> **Give the link** to other people, or use it yourself in another browser window (or another computer).
 
-<a href="flow-collab-big.png">
+* The link **may be pasted** in the browser's address bar. 
+* If you already have Flower Platform open in your browser, you can also paste the link into the **Follow** text input in the **Get/Follow Link** dialog. This will open editors in the same browser tab.
+
+<a href="/blog-img/2014-05-15/flow-collab-big.png">
 <img class="img-thumbnail center-block" src="/blog-img/2014-05-15/flow-collab-small.png"/>
 </a>
 
@@ -74,20 +79,22 @@ The link may be pasted in the browser's address bar. In this case the editor(s) 
 
 After saving your files, you may download them with the **Download** action in the context menu. Download individual files, or your entire directory, in which case the contents of the directory will be packed as a ``.zip`` file.
 
-# Mobile Application
+# Flower Platform Mobile
 
-Download the mobile application from the Google Play Store: LINK ???
+Download Flower Platform Mobile from [Google Play](https://play.google.com/store/apps/details?id=air.org.flowerplatform).
+
+The app is configured to connect automatically to the Flower Platform Hub. 
 
 The app is automatically configured to connect to the Flower Platform Hub. [The mobile section](/extensions/mobile/#ServerAccountsscreen) details the server accounts management.
 
 <img class="img-thumbnail center-block" src="/blog-img/2014-05-15/flow-mobile-config.png"/>
 
-Same as with the desktop application, the ``root`` editor is already opened. Navigate to the ``fileSystem`` node and set up your playground as recommended above, or go to an existing directory. On the mobile app, global and contextual actions can be run from the menu button.
+<span class="badge">1</span> Same as with the web application, the ``root`` editor is already opened. You can work with the editor almost in the same way as in the web environment.
 
-Since the mobile application was specifically designed as a quick way to view and edit mind maps when you don't have access to your desktop computer or laptop, downloading and uploading files is not available. Existing mind maps can be opened, edited and saved, and new mind maps may be created.
+<span class="badge">2</span> On the mobile app, global and contextual actions can be run from the menu button.
 
-You may open as many editors as you'd like. To switch between editors or close an editor, tap the **Editors** button. This will display a callout component that contains the opened editors.
+<span class="badge">3</span> You may open as many editors as you'd like. To switch between editors or close an editor, tap the **Editors** button. This will display a callout component that contains the opened editors.
+
+<span class="badge">4</span> To save, go to: **Menu > File > Save**.
 
 <img class="img-thumbnail center-block" src="/blog-img/2014-05-15/flow-mobile.png"/>
-
-</div>
