@@ -24,16 +24,16 @@ description: ""
 			{% endif %}
 			</div>
 		
+			<div> 
+				<a href="{{ post.url }}" class="btn btn-primary">More &raquo;</a>
+			</div>
+			
 			<div class="breadcrumb post-share">
 				{% assign share_url = post.url %}
 				{% assign share_title = post.title %}
 				{% include misc/share %}
 			</div>
 		
-			<div> 
-				<a href="{{ post.url }}" class="btn btn-primary">more &rarr;</a>
-			</div>	
-			
 			<hr {% if forloop.last == false %}class="soften post"{% endif %}/>
 		{% endfor %}
 
@@ -63,7 +63,7 @@ description: ""
 	</div>
 	<div class="col-sm-3">
 		{% assign sidebar_categories = site.categories %}
-		{% assign sidebar_show_categories = true %}
+		{% assign sidebar_show_categories = false %}
 		{% assign sidebar_posts_no = 5 %}
 		{% assign sidebar_show_recent_posts = true %}
 		{% assign sidebar_show_tag_cloud = true %} 

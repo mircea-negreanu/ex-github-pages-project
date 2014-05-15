@@ -1,6 +1,6 @@
 # This is the default format. 
 # For more see: http://jekyllrb.com/docs/permalinks/
-permalink: /blog/:categories/:year/:month/:day/:title 
+permalink: /blog/:year/:month/:day/:title 
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 pygments: true
@@ -69,11 +69,9 @@ custom_settings:
       hidden_sm: true
     -
       page: custom_page
-      link: hub.flower-platform.com
+      link: http://hub.flower-platform.com
       title: Flower Platform Hub
       icon: fa-cloud
-    -
-      page: flow
     
   # 
   # What link to be active when we are on a blog

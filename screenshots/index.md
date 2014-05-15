@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Screenshots"
-tagline: "from Flower Platform 1.1.*"
+tagline: "from Flower Platform 4"
 # The following applies when adding thumbnails:
 # the '-' character is mandatory
 # spatiation is mandatory
@@ -169,4 +169,16 @@ Including a **file access** permissions."
 ---
 {% include JB/setup %}
 
+{% assign thumbnails = page.thumbnails %}
 {% include misc/thumbnails %}
+
+<div markdown="1" class="page-header">
+# Screenshots <small>from Flower Platform 2 (a.k.a. Flower Dev Center)</small>
+</div>
+
+{% assign thumbnails = page.thumbnails %}
+{% include misc/thumbnails %}
+
+<div markdown="1" class="page-header">
+# Screenshots <small>from Flower Platform 1 (a.k.a. UML for ActionScript, Flex and Java)</small>
+</div>

@@ -14,7 +14,7 @@
 {% endcomment %}
 
 <div class="row">
-	{% for thumb in page.thumbnails %}
+	{% for thumb in thumbnails %}
 		{% assign for_modul = forloop.index0 | modulo: 3 %}
 		{% if forloop.index0 > 0 and 0 == for_modul %}
 </div>
@@ -33,3 +33,5 @@
 	</div>
 	{% endfor %}
 </div>
+
+{% assign thumbnails = nil %}
