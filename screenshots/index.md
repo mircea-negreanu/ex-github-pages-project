@@ -10,7 +10,42 @@ tagline: "from Flower Platform 4"
 #<4sp>picture:
 #<4sp>title: " can
 #be continued on the next line"
-thumbnails:
+thumbnails-fp4:
+  -
+    picture: "mm_overview.png"
+    thumb: "mm_overview_thumb.png"
+    title: "Mind Map"
+    text: "View and edit **mind maps** almost as if you were working with the desktop application."
+  -
+    picture: "mm_node_core.png"
+    thumb: "mm_node_core_thumb.png"
+    title: "Edit Node Dialog"
+    text: "Quick and easy text editing, with real time preview. Great for working with HTML text."    
+  -
+    picture: "properties.png"
+    thumb: "properties_thumb.png"
+    title: "Properties Editor"
+    text: "View and edit the **properties** of a selected node using the properties editor. You can change a property's value, or revert to the default value."    
+  -
+    picture: "file_system.png"
+    thumb: "file_system_thumb.png"
+    title: "File System"
+    text: "The directory structure is displayed as a tree. 
+    
+Add or remove files and folders, upload and download files to your computer."    
+  -
+    picture: "editor_dirty_state.png"
+    thumb: "editor_dirty_state_thumb.png"
+    title: "Editors - Web App"
+    text: "The content of a file is displayed in an **editor**.
+    
+Editing a file will cause it to become *dirty*, as indicated by the * symbol. Save the file to keep the changes, or close the editor to revert." 
+  -
+    picture: "mobile.png"
+    thumb: "mobile_thumb.png"
+    title: "Editors - Mobile App"
+    text: "**Mobile** editors are displayed full-screen. Tap the **Editors** button to switch or close editors." 
+thumbnails-fp2:
   -
     picture: "zoom-on-classes-without-doc.png"
     thumb: "zoom-on-classes-without-doc-300x200.png"
@@ -169,14 +204,14 @@ Including a **file access** permissions."
 ---
 {% include JB/setup %}
 
-{% assign thumbnails = page.thumbnails %}
+{% assign thumbnails = page.thumbnails-fp4 %}
 {% include misc/thumbnails %}
 
 <div markdown="1" class="page-header">
 # Screenshots <small>from Flower Platform 2 (a.k.a. Flower Dev Center)</small>
 </div>
 
-{% assign thumbnails = page.thumbnails %}
+{% assign thumbnails = page.thumbnails-fp2 %}
 {% include misc/thumbnails %}
 
 <div markdown="1" class="page-header">

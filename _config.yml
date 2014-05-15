@@ -55,7 +55,7 @@ custom_settings:
       icon: fa-home
       hidden_sm: true
     -
-      page: concepts
+      page: extensions
       icon: fa-cogs
     -
       page: screenshots
@@ -86,11 +86,11 @@ custom_settings:
   #  
   paginate_for: blog
   #
-  # If the concepts is active and what is the base path for them
+  # If the extensions is active and what is the base path for them
   #
-  concepts:
+  extensions:
     active: true
-    name: concepts
+    name: extensions
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #

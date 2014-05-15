@@ -11,7 +11,7 @@
     <meta name="author" content="{{ site.author.name }}">
 	
 	{% assign redirect_url = nil %}
-	{% if page.redirect == true and page.concepts-home == true %}
+	{% if page.redirect == true and page.extensions-home == true %}
 		{% assign first_tab = page.order | split: ' ' | first %}
 		
 		{% for node in site.pages %}

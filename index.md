@@ -82,7 +82,7 @@ The server side code is written in Java and it's modular, packed as [OSGi plugin
 
 The client side code (using [Apache Flex](http://flex.apache.org/) and JavaScript) is also modular.
 
-<p><a class="btn btn-default" href="concepts/core" role="button">More &raquo;</a></p>
+<p><a class="btn btn-default" href="extensions/core" role="button">More &raquo;</a></p>
 </div>
 
 <div class="col-md-4" markdown="1">
@@ -94,7 +94,7 @@ The platform makes it easy for extensions to expose most of their features on mo
 
 The client side code (using [Apache Flex](http://flex.apache.org/) and JavaScript) runs on mobile using the [Adobe AIR](http://www.adobe.com/products/air.html) technology.
 
-<p><a class="btn btn-default" href="concepts/mobile" role="button">More &raquo;</a></p>
+<p><a class="btn btn-default" href="extensions/mobile" role="button">More &raquo;</a></p>
 </div>
 
 <div class="col-md-4" markdown="1">
@@ -119,15 +119,15 @@ An **extension** is a set of OSGi plugins that do the actual work. I.e. they kno
 <div class="col-md-4" markdown="1">
 ## Mind Map
 
-<a href="concepts/mind-map/overview_big.png">
-<img class="img-thumbnail center-block" src="concepts/mind-map/overview_small.png"/>
+<a href="extensions/mind-map/overview_big.png">
+<img class="img-thumbnail center-block" src="extensions/mind-map/overview_small.png"/>
 </a>
 
 Display generic data as mind map nodes
 
 Collaborate in real time on [Freeplane](http://freeplane.sourceforge.net/) (or [FreeMind](http://freemind.sourceforge.net)) mind maps: on the web & mobile 
 
-<p><a class="btn btn-default" href="concepts/mind-map" role="button">More &raquo;</a></p>
+<p><a class="btn btn-default" href="extensions/mind-map" role="button">More &raquo;</a></p>
 </div>
 <div class="col-md-4" markdown="1">
 ## More Extensions

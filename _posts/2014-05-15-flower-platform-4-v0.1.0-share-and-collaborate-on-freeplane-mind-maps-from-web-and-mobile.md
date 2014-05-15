@@ -36,7 +36,7 @@ The first thing you'll notice should be the ``root`` editor that is already open
 
 <span class="badge">3</span> **Create a directory** (e.g. myFirstName-myLastName): right-click on the ``fileSystem`` node and choose **New File/Folder**. This will be your playground.
 
-<span class="label label-success">Tip:</span> More details on working with the file system are available in [the file system section](/concepts/core/#FileSystem).
+<span class="label label-success">Tip:</span> More details on working with the file system are available in [the file system section](/extensions/core/#FileSystem).
 
 ### Upload your mind maps
 
@@ -53,7 +53,7 @@ The first thing you'll notice should be the ``root`` editor that is already open
 
 <span class="badge">3</span> Now that you have a mind map, you can **view** it, **edit** nodes and **save** your work, almost as if you were working with the Freeplane desktop application.
 
-<span class="label label-success">Tip:</span> To see what's available for the mind map editor, visit [the mind map section](/concepts/mind-map). We are working on supporting more and more features from Freeplane. Working with editors in general is detailed in [the editor section](/concepts/core/#Editor).
+<span class="label label-success">Tip:</span> To see what's available for the mind map editor, visit [the mind map section](/extensions/mind-map). We are working on supporting more and more features from Freeplane. Working with editors in general is detailed in [the editor section](/extensions/core/#Editor).
 </div>
 
 ### Share your mind maps
@@ -78,7 +78,7 @@ After saving your files, you may download them with the **Download** action in t
 
 Download the mobile application from the Google Play Store: LINK ???
 
-The app is automatically configured to connect to the Flower Platform Hub. [The mobile section](/concepts/mobile/#ServerAccountsscreen) details the server accounts management.
+The app is automatically configured to connect to the Flower Platform Hub. [The mobile section](/extensions/mobile/#ServerAccountsscreen) details the server accounts management.
 
 <img class="img-thumbnail center-block" src="/blog-img/2014-05-15/flow-mobile-config.png"/>
 
